@@ -1,0 +1,11 @@
+F:\SoftUni\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\bin\Debug\net8.0\HotelManagementSystem.Web.ViewModels.deps.json
+F:\SoftUni\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\bin\Debug\net8.0\HotelManagementSystem.Web.ViewModels.dll
+F:\SoftUni\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\bin\Debug\net8.0\HotelManagementSystem.Web.ViewModels.pdb
+F:\SoftUni\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\obj\Debug\net8.0\HotelManagementSystem.Web.ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+F:\SoftUni\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\obj\Debug\net8.0\HotelManagementSystem.Web.ViewModels.AssemblyInfoInputs.cache
+F:\SoftUni\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\obj\Debug\net8.0\HotelManagementSystem.Web.ViewModels.AssemblyInfo.cs
+F:\SoftUni\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\obj\Debug\net8.0\HotelManagementSystem.Web.ViewModels.csproj.CoreCompileInputs.cache
+F:\SoftUni\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\obj\Debug\net8.0\HotelManagementSystem.Web.ViewModels.dll
+F:\SoftUni\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\obj\Debug\net8.0\refint\HotelManagementSystem.Web.ViewModels.dll
+F:\SoftUni\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\obj\Debug\net8.0\HotelManagementSystem.Web.ViewModels.pdb
+F:\SoftUni\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\obj\Debug\net8.0\ref\HotelManagementSystem.Web.ViewModels.dll

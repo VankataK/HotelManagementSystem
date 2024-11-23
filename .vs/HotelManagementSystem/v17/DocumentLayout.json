@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\SoftUni\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystemProject\\HotelManagementSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A874C84E-BA52-47F2-BA00-471196C5C659}|HotelManagementSystem.Data.Models\\HotelManagementSystem.Data.Models.csproj|f:\\softuni\\asp.net advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\hotelmanagementsystemproject\\hotelmanagementsystem\\hotelmanagementsystem.data.models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A874C84E-BA52-47F2-BA00-471196C5C659}|HotelManagementSystem.Data.Models\\HotelManagementSystem.Data.Models.csproj|solutionrelative:hotelmanagementsystem.data.models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8DBEFE0-92EF-44E1-93FB-E6C71254753C}|HotelManagementSystem.Data\\HotelManagementSystem.Data.csproj|f:\\softuni\\asp.net advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\hotelmanagementsystemproject\\hotelmanagementsystem\\hotelmanagementsystem.data\\configuration\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8DBEFE0-92EF-44E1-93FB-E6C71254753C}|HotelManagementSystem.Data\\HotelManagementSystem.Data.csproj|solutionrelative:hotelmanagementsystem.data\\configuration\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A874C84E-BA52-47F2-BA00-471196C5C659}|HotelManagementSystem.Data.Models\\HotelManagementSystem.Data.Models.csproj|f:\\softuni\\asp.net advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\hotelmanagementsystemproject\\hotelmanagementsystem\\hotelmanagementsystem.data.models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A874C84E-BA52-47F2-BA00-471196C5C659}|HotelManagementSystem.Data.Models\\HotelManagementSystem.Data.Models.csproj|solutionrelative:hotelmanagementsystem.data.models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Category.cs",
+              "DocumentMoniker": "F:\\SoftUni\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystemProject\\HotelManagementSystem\\HotelManagementSystem.Data.Models\\Category.cs",
+              "RelativeDocumentMoniker": "HotelManagementSystem.Data.Models\\Category.cs",
+              "ToolTip": "F:\\SoftUni\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystemProject\\HotelManagementSystem\\HotelManagementSystem.Data.Models\\Category.cs",
+              "RelativeToolTip": "HotelManagementSystem.Data.Models\\Category.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T17:38:37.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CategoryConfiguration.cs",
+              "DocumentMoniker": "F:\\SoftUni\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystemProject\\HotelManagementSystem\\HotelManagementSystem.Data\\Configuration\\CategoryConfiguration.cs",
+              "RelativeDocumentMoniker": "HotelManagementSystem.Data\\Configuration\\CategoryConfiguration.cs",
+              "ToolTip": "F:\\SoftUni\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystemProject\\HotelManagementSystem\\HotelManagementSystem.Data\\Configuration\\CategoryConfiguration.cs",
+              "RelativeToolTip": "HotelManagementSystem.Data\\Configuration\\CategoryConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T17:31:33.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Room.cs",
+              "DocumentMoniker": "F:\\SoftUni\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystemProject\\HotelManagementSystem\\HotelManagementSystem.Data.Models\\Room.cs",
+              "RelativeDocumentMoniker": "HotelManagementSystem.Data.Models\\Room.cs",
+              "ToolTip": "F:\\SoftUni\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystemProject\\HotelManagementSystem\\HotelManagementSystem.Data.Models\\Room.cs",
+              "RelativeToolTip": "HotelManagementSystem.Data.Models\\Room.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T17:26:59.896Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
