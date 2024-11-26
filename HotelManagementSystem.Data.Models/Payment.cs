@@ -15,6 +15,7 @@ namespace HotelManagementSystem.Data.Models
         public Guid ReservationId { get; set; }
 
         [ForeignKey(nameof(ReservationId))]
+        [DeleteBehavior(DeleteBehavior.Restrict)]
         public Reservation Reservation { get; set; } = null!;
 
         [Required]

@@ -8,7 +8,7 @@ namespace HotelManagementSystem.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<Category> builder)
         {
-            
+            builder.HasData(GenerateCategories());
         }
 
         private IEnumerable<Category> GenerateCategories()
@@ -28,31 +28,16 @@ namespace HotelManagementSystem.Data.Configuration
                 new Category()
                 {
                     Id = 3,
-                    Name = "Twin room"
-                },
-                new Category()
-                {
-                    Id = 4,
                     Name = "Family room"
                 },
                 new Category()
                 {
-                    Id = 5,
-                    Name = "Suite"
-                },
-                new Category()
-                {
-                    Id = 6,
+                    Id = 4,
                     Name = "Deluxe room"
                 },
                 new Category()
                 {
-                    Id = 7,
-                    Name = "Executive room"
-                },
-                new Category()
-                {
-                    Id = 8,
+                    Id = 5,
                     Name = "Presidential suite"
                 },
             };

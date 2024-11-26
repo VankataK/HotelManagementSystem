@@ -8,6 +8,11 @@
     ".NETCoreApp,Version=v8.0": {
       "HotelManagementSystem.Web/1.0.0": {
         "dependencies": {
+          "HotelManagementSystem.Common": "1.0.0",
+          "HotelManagementSystem.Data": "1.0.0",
+          "HotelManagementSystem.Data.Models": "1.0.0",
+          "HotelManagementSystem.Services.Data": "1.0.0",
+          "HotelManagementSystem.Web.Infrastructure": "1.0.0",
           "HotelManagementSystem.Web.ViewModels": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "8.0.5",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.5",
@@ -962,6 +967,39 @@
           }
         }
       },
+      "HotelManagementSystem.Common/1.0.0": {
+        "runtime": {
+          "HotelManagementSystem.Common.dll": {}
+        }
+      },
+      "HotelManagementSystem.Data/1.0.0": {
+        "dependencies": {
+          "HotelManagementSystem.Data.Models": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.5"
+        },
+        "runtime": {
+          "HotelManagementSystem.Data.dll": {}
+        }
+      },
+      "HotelManagementSystem.Data.Models/1.0.0": {
+        "dependencies": {
+          "HotelManagementSystem.Common": "1.0.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.5"
+        },
+        "runtime": {
+          "HotelManagementSystem.Data.Models.dll": {}
+        }
+      },
+      "HotelManagementSystem.Services.Data/1.0.0": {
+        "runtime": {
+          "HotelManagementSystem.Services.Data.dll": {}
+        }
+      },
+      "HotelManagementSystem.Web.Infrastructure/1.0.0": {
+        "runtime": {
+          "HotelManagementSystem.Web.Infrastructure.dll": {}
+        }
+      },
       "HotelManagementSystem.Web.ViewModels/1.0.0": {
         "runtime": {
           "HotelManagementSystem.Web.ViewModels.dll": {}
@@ -1569,6 +1607,31 @@
       "sha512": "sha512-IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
+    },
+    "HotelManagementSystem.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HotelManagementSystem.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HotelManagementSystem.Data.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HotelManagementSystem.Services.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HotelManagementSystem.Web.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "HotelManagementSystem.Web.ViewModels/1.0.0": {
       "type": "project",

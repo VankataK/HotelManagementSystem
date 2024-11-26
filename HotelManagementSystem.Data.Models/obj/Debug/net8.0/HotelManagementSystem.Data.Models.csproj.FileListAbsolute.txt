@@ -14,3 +14,19 @@ F:\SoftUni\ASP.NET Advanced - октомври 2024\HotelManagementSystemProject
 F:\SoftUni\ASP.NET Advanced - октомври 2024\HotelManagementSystemProject\HotelManagementSystem\HotelManagementSystem.Data.Models\obj\Debug\net8.0\refint\HotelManagementSystem.Data.Models.dll
 F:\SoftUni\ASP.NET Advanced - октомври 2024\HotelManagementSystemProject\HotelManagementSystem\HotelManagementSystem.Data.Models\obj\Debug\net8.0\HotelManagementSystem.Data.Models.pdb
 F:\SoftUni\ASP.NET Advanced - октомври 2024\HotelManagementSystemProject\HotelManagementSystem\HotelManagementSystem.Data.Models\obj\Debug\net8.0\ref\HotelManagementSystem.Data.Models.dll
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Data.Models\bin\Debug\net8.0\HotelManagementSystem.Data.Models.deps.json
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Data.Models\bin\Debug\net8.0\HotelManagementSystem.Data.Models.dll
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Data.Models\bin\Debug\net8.0\HotelManagementSystem.Data.Models.pdb
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Data.Models\bin\Debug\net8.0\HotelManagementSystem.Common.dll
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Data.Models\bin\Debug\net8.0\HotelManagementSystem.Common.pdb
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Data.Models\obj\Debug\net8.0\HotelManagementSystem.Data.Models.csproj.AssemblyReference.cache
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Data.Models\obj\Debug\net8.0\HotelManagementSystem.Data.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Data.Models\obj\Debug\net8.0\HotelManagementSystem.Data.Models.AssemblyInfoInputs.cache
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Data.Models\obj\Debug\net8.0\HotelManagementSystem.Data.Models.AssemblyInfo.cs
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Data.Models\obj\Debug\net8.0\HotelManagementSystem.Data.Models.csproj.CoreCompileInputs.cache
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Data.Models\obj\Debug\net8.0\HotelManagementSystem.Data.Models.sourcelink.json
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Data.Models\obj\Debug\net8.0\HotelMan.C66CA888.Up2Date
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Data.Models\obj\Debug\net8.0\HotelManagementSystem.Data.Models.dll
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Data.Models\obj\Debug\net8.0\refint\HotelManagementSystem.Data.Models.dll
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Data.Models\obj\Debug\net8.0\HotelManagementSystem.Data.Models.pdb
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Data.Models\obj\Debug\net8.0\ref\HotelManagementSystem.Data.Models.dll

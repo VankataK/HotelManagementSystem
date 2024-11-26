@@ -1,3 +1,5 @@
+using HotelManagementSystem.Data;
+using HotelManagementSystem.Data.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,11 +9,23 @@ namespace HotelManagementSystem.Web
     {
         public static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
+            WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+            string connectionString = builder.Configuration.GetConnectionString("DefaultConnection")!;
 
-            
+            builder.Services.AddDbContext<HotelManagmentDbContext>(options => 
+                options.UseSqlServer(connectionString));
 
-            var app = builder.Build();
+            builder.Services
+                .AddIdentity<ApplicationUser, IdentityRole<Guid>>(cfg =>
+                {
+                    ConfigureIdentity(builder, cfg);
+                })
+                .AddEntityFrameworkStores<HotelManagmentDbContext>();
+
+            builder.Services.AddControllersWithViews();
+            builder.Services.AddRazorPages();
+
+            WebApplication app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -30,6 +44,7 @@ namespace HotelManagementSystem.Web
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(
@@ -38,6 +53,32 @@ namespace HotelManagementSystem.Web
             app.MapRazorPages();
 
             app.Run();
+        }
+
+        private static void ConfigureIdentity(WebApplicationBuilder builder, IdentityOptions cfg)
+        {
+            cfg.Password.RequireDigit =
+                builder.Configuration.GetValue<bool>("Identity:Password:RequireDigits");
+            cfg.Password.RequireLowercase =
+                builder.Configuration.GetValue<bool>("Identity:Password:RequireLowercase");
+            cfg.Password.RequireUppercase =
+                builder.Configuration.GetValue<bool>("Identity:Password:RequireUppercase");
+            cfg.Password.RequireNonAlphanumeric =
+                builder.Configuration.GetValue<bool>("Identity:Password:RequireNonAlphanumerical");
+            cfg.Password.RequiredLength =
+                builder.Configuration.GetValue<int>("Identity:Password:RequiredLength");
+            cfg.Password.RequiredUniqueChars =
+                builder.Configuration.GetValue<int>("Identity:Password:RequiredUniqueCharacters");
+
+            cfg.SignIn.RequireConfirmedAccount =
+                builder.Configuration.GetValue<bool>("Identity:SignIn:RequireConfirmedAccount");
+            cfg.SignIn.RequireConfirmedEmail =
+                builder.Configuration.GetValue<bool>("Identity:SignIn:RequireConfirmedEmail");
+            cfg.SignIn.RequireConfirmedPhoneNumber =
+                builder.Configuration.GetValue<bool>("Identity:SignIn:RequireConfirmedPhoneNumber");
+
+            cfg.User.RequireUniqueEmail =
+                builder.Configuration.GetValue<bool>("Identity:User:RequireUniqueEmail");
         }
     }
 }

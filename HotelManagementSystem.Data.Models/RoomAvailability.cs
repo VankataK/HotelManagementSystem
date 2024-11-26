@@ -12,9 +12,10 @@ namespace HotelManagementSystem.Data.Models
 
         [Required]
         [Comment("Room Identifier")]
-        public int RoomId { get; set; }
+        public Guid RoomId { get; set; }
 
         [ForeignKey(nameof(RoomId))]
+        [DeleteBehavior(DeleteBehavior.Restrict)]
         public Room Room { get; set; } = null!;
 
         [Required]

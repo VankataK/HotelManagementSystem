@@ -16,6 +16,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\HotelManagementSystem.Common\HotelManagementSystem.Common.csproj" />
+    <ProjectReference Include="..\HotelManagementSystem.Data.Models\HotelManagementSystem.Data.Models.csproj" />
+    <ProjectReference Include="..\HotelManagementSystem.Data\HotelManagementSystem.Data.csproj" />
+    <ProjectReference Include="..\HotelManagementSystem.Services.Data\HotelManagementSystem.Services.Data.csproj" />
+    <ProjectReference Include="..\HotelManagementSystem.Web.Infrastructure\HotelManagementSystem.Web.Infrastructure.csproj" />
     <ProjectReference Include="..\HotelManagementSystem.Web.ViewModels\HotelManagementSystem.Web.ViewModels.csproj" />
   </ItemGroup>
 

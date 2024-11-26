@@ -22,6 +22,6 @@ namespace HotelManagementSystem.Data.Models
         [Comment("Service price")]
         public decimal Price { get; set; }
 
-        public ICollection<ReservationExtraService> ReservationExtraServices { get; set; } = new List<ReservationExtraService>();
+        public ICollection<ReservationExtraService> ReservationsExtraServices { get; set; } = new List<ReservationExtraService>();
     }
 }

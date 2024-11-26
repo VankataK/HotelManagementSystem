@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
 namespace HotelManagementSystem.Data.Models
 {
@@ -13,9 +13,10 @@ namespace HotelManagementSystem.Data.Models
 
         [Required]
         [Comment("Room Identifier")]
-        public int RoomId { get; set; }
+        public Guid RoomId { get; set; }
 
         [ForeignKey(nameof(RoomId))]
+        [DeleteBehavior(DeleteBehavior.Restrict)]
         public Room Room { get; set; } = null!;
 
         [Required]
@@ -23,6 +24,7 @@ namespace HotelManagementSystem.Data.Models
         public Guid GuestId { get; set; }
 
         [ForeignKey(nameof(GuestId))]
+        [DeleteBehavior(DeleteBehavior.Restrict)]
         public ApplicationUser Guest { get; set; } = null!;
 
         [Required]
@@ -47,5 +49,7 @@ namespace HotelManagementSystem.Data.Models
         [DefaultValue("Pending")]
         [Comment("Reservation status")]
         public string Status { get; set; } = null!;
+
+        public ICollection<ReservationExtraService> ReservationsExtraServices { get; set; } = new List<ReservationExtraService>();
     }
 }

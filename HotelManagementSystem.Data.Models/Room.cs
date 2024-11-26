@@ -21,6 +21,7 @@ namespace HotelManagementSystem.Data.Models
         public int CategoryId { get; set; }
 
         [ForeignKey(nameof(CategoryId))]
+        [DeleteBehavior(DeleteBehavior.Restrict)]
         public Category Category { get; set; } = null!;
 
         [Required]
@@ -40,5 +41,7 @@ namespace HotelManagementSystem.Data.Models
         [Required]
         [Comment("Capacity of the room")]
         public int MaxCapacity { get; set; }
+
+        public ICollection<Reservation> Reservations { get; set; } = new List<Reservation>();
     }
 }

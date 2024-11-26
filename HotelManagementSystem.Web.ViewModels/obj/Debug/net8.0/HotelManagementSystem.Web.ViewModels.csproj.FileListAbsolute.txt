@@ -9,3 +9,15 @@ F:\SoftUni\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelM
 F:\SoftUni\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\obj\Debug\net8.0\refint\HotelManagementSystem.Web.ViewModels.dll
 F:\SoftUni\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\obj\Debug\net8.0\HotelManagementSystem.Web.ViewModels.pdb
 F:\SoftUni\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\obj\Debug\net8.0\ref\HotelManagementSystem.Web.ViewModels.dll
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\bin\Debug\net8.0\HotelManagementSystem.Web.ViewModels.deps.json
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\bin\Debug\net8.0\HotelManagementSystem.Web.ViewModels.dll
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\bin\Debug\net8.0\HotelManagementSystem.Web.ViewModels.pdb
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\obj\Debug\net8.0\HotelManagementSystem.Web.ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\obj\Debug\net8.0\HotelManagementSystem.Web.ViewModels.AssemblyInfoInputs.cache
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\obj\Debug\net8.0\HotelManagementSystem.Web.ViewModels.AssemblyInfo.cs
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\obj\Debug\net8.0\HotelManagementSystem.Web.ViewModels.csproj.CoreCompileInputs.cache
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\obj\Debug\net8.0\HotelManagementSystem.Web.ViewModels.sourcelink.json
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\obj\Debug\net8.0\HotelManagementSystem.Web.ViewModels.dll
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\obj\Debug\net8.0\refint\HotelManagementSystem.Web.ViewModels.dll
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\obj\Debug\net8.0\HotelManagementSystem.Web.ViewModels.pdb
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web.ViewModels\obj\Debug\net8.0\ref\HotelManagementSystem.Web.ViewModels.dll

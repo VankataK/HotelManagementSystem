@@ -1,18 +1,78 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\SoftUni\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystemProject\\HotelManagementSystem\\",
+  "WorkspaceRootPath": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A874C84E-BA52-47F2-BA00-471196C5C659}|HotelManagementSystem.Data.Models\\HotelManagementSystem.Data.Models.csproj|f:\\softuni\\asp.net advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\hotelmanagementsystemproject\\hotelmanagementsystem\\hotelmanagementsystem.data.models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A874C84E-BA52-47F2-BA00-471196C5C659}|HotelManagementSystem.Data.Models\\HotelManagementSystem.Data.Models.csproj|solutionrelative:hotelmanagementsystem.data.models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FDA85688-1710-4DC7-9C69-50CE6D5668AF}|HotelManagementSystem.Web\\HotelManagementSystem.Web.csproj|d:\\new folder\\snimki telefon 2018\\asp.net advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\hotelmanagementsystem\\hotelmanagementsystem.web\\areas\\identity\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FDA85688-1710-4DC7-9C69-50CE6D5668AF}|HotelManagementSystem.Web\\HotelManagementSystem.Web.csproj|solutionrelative:hotelmanagementsystem.web\\areas\\identity\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8DBEFE0-92EF-44E1-93FB-E6C71254753C}|HotelManagementSystem.Data\\HotelManagementSystem.Data.csproj|f:\\softuni\\asp.net advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\hotelmanagementsystemproject\\hotelmanagementsystem\\hotelmanagementsystem.data\\configuration\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FDA85688-1710-4DC7-9C69-50CE6D5668AF}|HotelManagementSystem.Web\\HotelManagementSystem.Web.csproj|d:\\new folder\\snimki telefon 2018\\asp.net advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\hotelmanagementsystem\\hotelmanagementsystem.web\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FDA85688-1710-4DC7-9C69-50CE6D5668AF}|HotelManagementSystem.Web\\HotelManagementSystem.Web.csproj|solutionrelative:hotelmanagementsystem.web\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDA85688-1710-4DC7-9C69-50CE6D5668AF}|HotelManagementSystem.Web\\HotelManagementSystem.Web.csproj|d:\\new folder\\snimki telefon 2018\\asp.net advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\hotelmanagementsystem\\hotelmanagementsystem.web\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FDA85688-1710-4DC7-9C69-50CE6D5668AF}|HotelManagementSystem.Web\\HotelManagementSystem.Web.csproj|solutionrelative:hotelmanagementsystem.web\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDA85688-1710-4DC7-9C69-50CE6D5668AF}|HotelManagementSystem.Web\\HotelManagementSystem.Web.csproj|d:\\new folder\\snimki telefon 2018\\asp.net advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\hotelmanagementsystem\\hotelmanagementsystem.web\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FDA85688-1710-4DC7-9C69-50CE6D5668AF}|HotelManagementSystem.Web\\HotelManagementSystem.Web.csproj|solutionrelative:hotelmanagementsystem.web\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDA85688-1710-4DC7-9C69-50CE6D5668AF}|HotelManagementSystem.Web\\HotelManagementSystem.Web.csproj|d:\\new folder\\snimki telefon 2018\\asp.net advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\hotelmanagementsystem\\hotelmanagementsystem.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FDA85688-1710-4DC7-9C69-50CE6D5668AF}|HotelManagementSystem.Web\\HotelManagementSystem.Web.csproj|solutionrelative:hotelmanagementsystem.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDA85688-1710-4DC7-9C69-50CE6D5668AF}|HotelManagementSystem.Web\\HotelManagementSystem.Web.csproj|d:\\new folder\\snimki telefon 2018\\asp.net advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\hotelmanagementsystem\\hotelmanagementsystem.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FDA85688-1710-4DC7-9C69-50CE6D5668AF}|HotelManagementSystem.Web\\HotelManagementSystem.Web.csproj|solutionrelative:hotelmanagementsystem.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8DBEFE0-92EF-44E1-93FB-E6C71254753C}|HotelManagementSystem.Data\\HotelManagementSystem.Data.csproj|d:\\new folder\\snimki telefon 2018\\asp.net advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\hotelmanagementsystem\\hotelmanagementsystem.data\\hotelmanagmentdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8DBEFE0-92EF-44E1-93FB-E6C71254753C}|HotelManagementSystem.Data\\HotelManagementSystem.Data.csproj|solutionrelative:hotelmanagementsystem.data\\hotelmanagmentdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3392744E-2E40-4871-B0F0-66B522964020}|HotelManagementSystem.Common\\HotelManagementSystem.Common.csproj|d:\\new folder\\snimki telefon 2018\\asp.net advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\hotelmanagementsystem\\hotelmanagementsystem.common\\applicationconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3392744E-2E40-4871-B0F0-66B522964020}|HotelManagementSystem.Common\\HotelManagementSystem.Common.csproj|solutionrelative:hotelmanagementsystem.common\\applicationconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDA85688-1710-4DC7-9C69-50CE6D5668AF}|HotelManagementSystem.Web\\HotelManagementSystem.Web.csproj|d:\\new folder\\snimki telefon 2018\\asp.net advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\hotelmanagementsystem\\hotelmanagementsystem.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDA85688-1710-4DC7-9C69-50CE6D5668AF}|HotelManagementSystem.Web\\HotelManagementSystem.Web.csproj|solutionrelative:hotelmanagementsystem.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDA85688-1710-4DC7-9C69-50CE6D5668AF}|HotelManagementSystem.Web\\HotelManagementSystem.Web.csproj|d:\\new folder\\snimki telefon 2018\\asp.net advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\hotelmanagementsystem\\hotelmanagementsystem.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDA85688-1710-4DC7-9C69-50CE6D5668AF}|HotelManagementSystem.Web\\HotelManagementSystem.Web.csproj|solutionrelative:hotelmanagementsystem.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8DBEFE0-92EF-44E1-93FB-E6C71254753C}|HotelManagementSystem.Data\\HotelManagementSystem.Data.csproj|d:\\new folder\\snimki telefon 2018\\asp.net advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\hotelmanagementsystem\\hotelmanagementsystem.data\\migrations\\20241126151323_initialmigration.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8DBEFE0-92EF-44E1-93FB-E6C71254753C}|HotelManagementSystem.Data\\HotelManagementSystem.Data.csproj|solutionrelative:hotelmanagementsystem.data\\migrations\\20241126151323_initialmigration.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8DBEFE0-92EF-44E1-93FB-E6C71254753C}|HotelManagementSystem.Data\\HotelManagementSystem.Data.csproj|d:\\new folder\\snimki telefon 2018\\asp.net advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\hotelmanagementsystem\\hotelmanagementsystem.data\\migrations\\hotelmanagmentdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8DBEFE0-92EF-44E1-93FB-E6C71254753C}|HotelManagementSystem.Data\\HotelManagementSystem.Data.csproj|solutionrelative:hotelmanagementsystem.data\\migrations\\hotelmanagmentdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8DBEFE0-92EF-44E1-93FB-E6C71254753C}|HotelManagementSystem.Data\\HotelManagementSystem.Data.csproj|d:\\new folder\\snimki telefon 2018\\asp.net advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\hotelmanagementsystem\\hotelmanagementsystem.data\\configuration\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8DBEFE0-92EF-44E1-93FB-E6C71254753C}|HotelManagementSystem.Data\\HotelManagementSystem.Data.csproj|solutionrelative:hotelmanagementsystem.data\\configuration\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A874C84E-BA52-47F2-BA00-471196C5C659}|HotelManagementSystem.Data.Models\\HotelManagementSystem.Data.Models.csproj|f:\\softuni\\asp.net advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\hotelmanagementsystemproject\\hotelmanagementsystem\\hotelmanagementsystem.data.models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A874C84E-BA52-47F2-BA00-471196C5C659}|HotelManagementSystem.Data.Models\\HotelManagementSystem.Data.Models.csproj|solutionrelative:hotelmanagementsystem.data.models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FDA85688-1710-4DC7-9C69-50CE6D5668AF}|HotelManagementSystem.Web\\HotelManagementSystem.Web.csproj|d:\\new folder\\snimki telefon 2018\\asp.net advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\hotelmanagementsystem\\hotelmanagementsystem.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FDA85688-1710-4DC7-9C69-50CE6D5668AF}|HotelManagementSystem.Web\\HotelManagementSystem.Web.csproj|solutionrelative:hotelmanagementsystem.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDA85688-1710-4DC7-9C69-50CE6D5668AF}|HotelManagementSystem.Web\\HotelManagementSystem.Web.csproj|d:\\new folder\\snimki telefon 2018\\asp.net advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\hotelmanagementsystem\\hotelmanagementsystem.web\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FDA85688-1710-4DC7-9C69-50CE6D5668AF}|HotelManagementSystem.Web\\HotelManagementSystem.Web.csproj|solutionrelative:hotelmanagementsystem.web\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Data\\Migrations\\20241126151323_InitialMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HotelManagementSystem.Data\\Migrations\\20241126151323_InitialMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A874C84E-BA52-47F2-BA00-471196C5C659}|HotelManagementSystem.Data.Models\\HotelManagementSystem.Data.Models.csproj|d:\\new folder\\snimki telefon 2018\\asp.net advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\hotelmanagementsystem\\hotelmanagementsystem.data.models\\roomavailability.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A874C84E-BA52-47F2-BA00-471196C5C659}|HotelManagementSystem.Data.Models\\HotelManagementSystem.Data.Models.csproj|solutionrelative:hotelmanagementsystem.data.models\\roomavailability.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A874C84E-BA52-47F2-BA00-471196C5C659}|HotelManagementSystem.Data.Models\\HotelManagementSystem.Data.Models.csproj|d:\\new folder\\snimki telefon 2018\\asp.net advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\hotelmanagementsystem\\hotelmanagementsystem.data.models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A874C84E-BA52-47F2-BA00-471196C5C659}|HotelManagementSystem.Data.Models\\HotelManagementSystem.Data.Models.csproj|solutionrelative:hotelmanagementsystem.data.models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,43 +82,240 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Category.cs",
-              "DocumentMoniker": "F:\\SoftUni\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystemProject\\HotelManagementSystem\\HotelManagementSystem.Data.Models\\Category.cs",
-              "RelativeDocumentMoniker": "HotelManagementSystem.Data.Models\\Category.cs",
-              "ToolTip": "F:\\SoftUni\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystemProject\\HotelManagementSystem\\HotelManagementSystem.Data.Models\\Category.cs",
-              "RelativeToolTip": "HotelManagementSystem.Data.Models\\Category.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T17:38:37.229Z"
+              "DocumentIndex": 0,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Web\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "HotelManagementSystem.Web\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+              "ToolTip": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Web\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+              "RelativeToolTip": "HotelManagementSystem.Web\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T15:44:04.543Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CategoryConfiguration.cs",
-              "DocumentMoniker": "F:\\SoftUni\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystemProject\\HotelManagementSystem\\HotelManagementSystem.Data\\Configuration\\CategoryConfiguration.cs",
-              "RelativeDocumentMoniker": "HotelManagementSystem.Data\\Configuration\\CategoryConfiguration.cs",
-              "ToolTip": "F:\\SoftUni\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystemProject\\HotelManagementSystem\\HotelManagementSystem.Data\\Configuration\\CategoryConfiguration.cs",
-              "RelativeToolTip": "HotelManagementSystem.Data\\Configuration\\CategoryConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T17:31:33.612Z"
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Web\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "HotelManagementSystem.Web\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Web\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "HotelManagementSystem.Web\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T15:43:58.474Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Room.cs",
-              "DocumentMoniker": "F:\\SoftUni\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystemProject\\HotelManagementSystem\\HotelManagementSystem.Data.Models\\Room.cs",
-              "RelativeDocumentMoniker": "HotelManagementSystem.Data.Models\\Room.cs",
-              "ToolTip": "F:\\SoftUni\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystemProject\\HotelManagementSystem\\HotelManagementSystem.Data.Models\\Room.cs",
-              "RelativeToolTip": "HotelManagementSystem.Data.Models\\Room.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAgAAAA",
+              "DocumentIndex": 2,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Web\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "HotelManagementSystem.Web\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Web\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "HotelManagementSystem.Web\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T15:43:56.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Web\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "HotelManagementSystem.Web\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Web\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "HotelManagementSystem.Web\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T15:42:49.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Web\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "HotelManagementSystem.Web\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Web\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "HotelManagementSystem.Web\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T15:42:31.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ApplicationConstants.cs",
+              "DocumentMoniker": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Common\\ApplicationConstants.cs",
+              "RelativeDocumentMoniker": "HotelManagementSystem.Common\\ApplicationConstants.cs",
+              "ToolTip": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Common\\ApplicationConstants.cs",
+              "RelativeToolTip": "HotelManagementSystem.Common\\ApplicationConstants.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T17:26:59.896Z",
+              "WhenOpened": "2024-11-26T15:26:22.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "HotelManagementSystem.Web\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "HotelManagementSystem.Web\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-26T15:24:28.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Web\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "HotelManagementSystem.Web\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Web\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "HotelManagementSystem.Web\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T15:22:30.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HotelManagmentDbContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Data\\Migrations\\HotelManagmentDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "HotelManagementSystem.Data\\Migrations\\HotelManagmentDbContextModelSnapshot.cs",
+              "ToolTip": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Data\\Migrations\\HotelManagmentDbContextModelSnapshot.cs",
+              "RelativeToolTip": "HotelManagementSystem.Data\\Migrations\\HotelManagmentDbContextModelSnapshot.cs",
+              "ViewState": "AQIAAGUAAAAAAAAAAAAWwG0AAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T15:19:03.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20241126151323_InitialMigration.Designer.cs",
+              "DocumentMoniker": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Data\\Migrations\\20241126151323_InitialMigration.Designer.cs",
+              "RelativeDocumentMoniker": "HotelManagementSystem.Data\\Migrations\\20241126151323_InitialMigration.Designer.cs",
+              "ToolTip": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Data\\Migrations\\20241126151323_InitialMigration.Designer.cs",
+              "RelativeToolTip": "HotelManagementSystem.Data\\Migrations\\20241126151323_InitialMigration.Designer.cs",
+              "ViewState": "AQIAAMgBAAAAAAAAAAAWwM4BAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T15:18:19.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Web\\Program.cs",
+              "RelativeDocumentMoniker": "HotelManagementSystem.Web\\Program.cs",
+              "ToolTip": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Web\\Program.cs",
+              "RelativeToolTip": "HotelManagementSystem.Web\\Program.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwBYAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T14:53:12.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HotelManagmentDbContext.cs",
+              "DocumentMoniker": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Data\\HotelManagmentDbContext.cs",
+              "RelativeDocumentMoniker": "HotelManagementSystem.Data\\HotelManagmentDbContext.cs",
+              "ToolTip": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Data\\HotelManagmentDbContext.cs",
+              "RelativeToolTip": "HotelManagementSystem.Data\\HotelManagmentDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T14:51:07.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Web\\appsettings.json",
+              "RelativeDocumentMoniker": "HotelManagementSystem.Web\\appsettings.json",
+              "ToolTip": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Web\\appsettings.json",
+              "RelativeToolTip": "HotelManagementSystem.Web\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-26T15:17:41.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "20241126151323_InitialMigration.cs",
+              "DocumentMoniker": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Data\\Migrations\\20241126151323_InitialMigration.cs",
+              "RelativeDocumentMoniker": "HotelManagementSystem.Data\\Migrations\\20241126151323_InitialMigration.cs",
+              "ToolTip": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Data\\Migrations\\20241126151323_InitialMigration.cs",
+              "RelativeToolTip": "HotelManagementSystem.Data\\Migrations\\20241126151323_InitialMigration.cs",
+              "ViewState": "AQIAAPEAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T15:13:23.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "RoomAvailability.cs",
+              "DocumentMoniker": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Data.Models\\RoomAvailability.cs",
+              "RelativeDocumentMoniker": "HotelManagementSystem.Data.Models\\RoomAvailability.cs",
+              "ToolTip": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Data.Models\\RoomAvailability.cs",
+              "RelativeToolTip": "HotelManagementSystem.Data.Models\\RoomAvailability.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwAwAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T15:13:09.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Reservation.cs",
+              "DocumentMoniker": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Data.Models\\Reservation.cs",
+              "RelativeDocumentMoniker": "HotelManagementSystem.Data.Models\\Reservation.cs",
+              "ToolTip": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Data.Models\\Reservation.cs",
+              "RelativeToolTip": "HotelManagementSystem.Data.Models\\Reservation.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T15:12:46.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Web\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "HotelManagementSystem.Web\\appsettings.Development.json",
+              "ToolTip": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Web\\appsettings.Development.json",
+              "RelativeToolTip": "HotelManagementSystem.Web\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-26T14:52:06.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CategoryConfiguration.cs",
+              "DocumentMoniker": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Data\\Configuration\\CategoryConfiguration.cs",
+              "RelativeDocumentMoniker": "HotelManagementSystem.Data\\Configuration\\CategoryConfiguration.cs",
+              "ToolTip": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - \u043E\u043A\u0442\u043E\u043C\u0432\u0440\u0438 2024\\HotelManagementSystem\\HotelManagementSystem.Data\\Configuration\\CategoryConfiguration.cs",
+              "RelativeToolTip": "HotelManagementSystem.Data\\Configuration\\CategoryConfiguration.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAwwAsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T14:50:50.793Z",
               "EditorCaption": ""
             }
           ]
