@@ -307,7 +307,14 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Data.Models\\HotelManagementSystem.Data.Models.csproj": {
+                "projectPath": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Data.Models\\HotelManagementSystem.Data.Models.csproj"
+              },
+              "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Data\\HotelManagementSystem.Data.csproj": {
+                "projectPath": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Data\\HotelManagementSystem.Data.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -324,6 +331,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "s+agQqfGyenGfgbzRJgftODnlGsWRbMrNSMcQp/dd0eFK43WatVTquPH6NoxoXi+7Sn0XyDBddCW3JMmJIctbw==",
+  "dgSpecHash": "LcHPr1Ch7u0QSdLI36D4FdsbMOOVKbILTT02bfBt4cvoIjZ0ZTfiG6K4elns6XRAC84BAZRtXU4Yp09ffeJ6BA==",
   "success": true,
   "projectFilePath": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Web\\HotelManagementSystem.Web.csproj",
   "expectedPackageFiles": [
@@ -32,7 +32,7 @@
     "C:\\Users\\ivank\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.0\\microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
     "C:\\Users\\ivank\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\ivank\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
-    "C:\\Users\\ivank\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\ivank\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
     "C:\\Users\\ivank\\.nuget\\packages\\microsoft.extensions.dependencymodel\\8.0.0\\microsoft.extensions.dependencymodel.8.0.0.nupkg.sha512",
     "C:\\Users\\ivank\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\8.0.0\\microsoft.extensions.fileproviders.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\ivank\\.nuget\\packages\\microsoft.extensions.fileproviders.embedded\\8.0.5\\microsoft.extensions.fileproviders.embedded.8.0.5.nupkg.sha512",

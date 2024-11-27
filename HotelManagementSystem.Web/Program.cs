@@ -1,5 +1,6 @@
 using HotelManagementSystem.Data;
 using HotelManagementSystem.Data.Models;
+using HotelManagementSystem.Web.Infrastructure.Extensions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,6 +22,8 @@ namespace HotelManagementSystem.Web
                     ConfigureIdentity(builder, cfg);
                 })
                 .AddEntityFrameworkStores<HotelManagmentDbContext>();
+
+            builder.Services.RegisterRepositories(typeof(ApplicationUser).Assembly);
 
             builder.Services.AddControllersWithViews();
             builder.Services.AddRazorPages();
