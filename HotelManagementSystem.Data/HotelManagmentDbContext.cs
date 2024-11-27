@@ -29,8 +29,6 @@ namespace HotelManagementSystem.Data
 
         public DbSet<ReservationExtraService> ReservationsExtraServices { get; set; } = null!;
 
-        public DbSet<Payment> Payments { get; set; } = null!;
-
         public DbSet<RoomAvailability> RoomsAvailabilities { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder builder)
