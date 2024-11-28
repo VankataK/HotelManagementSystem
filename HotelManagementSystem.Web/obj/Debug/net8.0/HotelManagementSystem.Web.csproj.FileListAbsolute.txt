@@ -305,3 +305,4 @@ D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\Hotel
 D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web\bin\Debug\net8.0\HotelManagementSystem.Web.Infrastructure.dll
 D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web\bin\Debug\net8.0\HotelManagementSystem.Services.Data.pdb
 D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web\bin\Debug\net8.0\HotelManagementSystem.Web.Infrastructure.pdb
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Web\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
