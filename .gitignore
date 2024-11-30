@@ -393,3 +393,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+.vs/HotelManagementSystem/v17/.suo
+*.v2
+.vs/HotelManagementSystem/v17/.suo

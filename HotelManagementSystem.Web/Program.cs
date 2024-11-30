@@ -17,8 +17,6 @@ namespace HotelManagementSystem.Web
             builder.Services.AddDbContext<HotelManagmentDbContext>(options => 
                 options.UseSqlServer(connectionString));
 
-            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<HotelManagmentDbContext>();
-
             builder.Services
                 .AddIdentity<ApplicationUser, IdentityRole<Guid>>(cfg =>
                 {
