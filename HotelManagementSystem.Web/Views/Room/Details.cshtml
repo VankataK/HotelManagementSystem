@@ -1,0 +1,28 @@
+﻿﻿@using HotelManagementSystem.Web.ViewModels.Room;
+﻿@using HotelManagementSystem.Services.Data.Interfaces
+@using HotelManagementSystem.Web.Infrastructure.Extensions
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model RoomDetailsViewModel
+
+@{
+    ViewData["Title"] = "Room Details";
+}
+
+<div class="card  mb-10 shadow-sm mb-5">
+    <div class="card-header">
+        <h2>Room Details</h2>
+    </div>
+    <img src="@Model.ImageUrl" class="card-img-top" alt="Room Image" style="height: 450px; object-fit: cover;">
+    <div class="card-body text-primary">
+        <h5 class="card-title">Room @Model.RoomNumber</h5>
+        <p class="card-text"><strong>Category:</strong> @Model.CategoryName</p>
+        <p class="card-text"><strong>Description:</strong> @Model.Description</p>
+        <p class="card-text"><strong>Price Per Night:</strong> BGN @Model.PricePerNight</p>
+        <p class="card-text"><strong>Max Occupancy:</strong> @Model.MaxCapacity</p>
+        <a asp-action="Index" class="btn btn-secondary">Back to Rooms</a>
+        @if (User.Identity!.IsAuthenticated)
+        {
+            <a asp-controller="Reservation" asp-action="Make" class="btn btn-primary">Make Reservation</a>
+        }
+    </div>
+</div>

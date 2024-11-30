@@ -32,5 +32,31 @@ namespace HotelManagementSystem.Services.Data
 
             return rooms;
         }
+
+        public async Task<RoomDetailsViewModel?> GetRoomDetailsByIdAsync(Guid id)
+        {
+            Room? room = await this.roomRepository
+                .GetAllAttached()
+                .Include(r => r.Category)
+                .FirstOrDefaultAsync(c => c.Id == id);
+
+            RoomDetailsViewModel? viewModel = null;
+            if (room != null)
+            {
+                viewModel = new RoomDetailsViewModel()
+                {
+                    Id = room.Id.ToString(),
+                    RoomNumber = room.RoomNumber,
+                    CategoryName = room.Category.Name,
+                    Description = room.Description,
+                    ImageUrl = room.ImageUrl,
+                    PricePerNight = room.PricePerNight,
+                    MaxCapacity = room.MaxCapacity
+                };
+            }
+
+            return viewModel;
+        }
+
     }
 }

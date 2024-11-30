@@ -6,7 +6,11 @@
 @inject IUserService UserService
 
 @{
-    string userFullName = await UserService.GetFullNameByEmailAsync(User.Identity?.Name!);
+    string userFullName = string.Empty;
+    if (SignInManager.IsSignedIn(User))
+    {
+        userFullName = await UserService.GetFullNameByEmailAsync(User.Identity?.Name!);
+    }
 }
 
 <ul class="navbar-nav">
