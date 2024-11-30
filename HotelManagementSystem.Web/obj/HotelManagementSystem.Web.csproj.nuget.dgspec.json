@@ -243,7 +243,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Data.Models\\HotelManagementSystem.Data.Models.csproj": {
+                "projectPath": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Data.Models\\HotelManagementSystem.Data.Models.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

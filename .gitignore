@@ -396,3 +396,6 @@ FodyWeavers.xsd
 .vs/HotelManagementSystem/v17/.suo
 *.v2
 .vs/HotelManagementSystem/v17/.suo
+HotelManagementSystem.Services.Data/obj/Debug/net8.0/HotelManagementSystem.Services.Data.assets.cache
+*.cache
+*.dll
