@@ -246,6 +246,12 @@
             "projectReferences": {
               "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Data.Models\\HotelManagementSystem.Data.Models.csproj": {
                 "projectPath": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Data.Models\\HotelManagementSystem.Data.Models.csproj"
+              },
+              "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Data\\HotelManagementSystem.Data.csproj": {
+                "projectPath": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Data\\HotelManagementSystem.Data.csproj"
+              },
+              "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Web.ViewModels\\HotelManagementSystem.Web.ViewModels.csproj": {
+                "projectPath": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Web.ViewModels\\HotelManagementSystem.Web.ViewModels.csproj"
               }
             }
           }

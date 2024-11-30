@@ -2208,7 +2208,9 @@
       },
       "HotelManagementSystem.Services.Data/1.0.0": {
         "dependencies": {
-          "HotelManagementSystem.Data.Models": "1.0.0"
+          "HotelManagementSystem.Data": "1.0.0",
+          "HotelManagementSystem.Data.Models": "1.0.0",
+          "HotelManagementSystem.Web.ViewModels": "1.0.0"
         },
         "runtime": {
           "HotelManagementSystem.Services.Data.dll": {}

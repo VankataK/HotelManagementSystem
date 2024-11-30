@@ -10,3 +10,13 @@ D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\Hotel
 D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Services.Data\obj\Debug\net8.0\refint\HotelManagementSystem.Services.Data.dll
 D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Services.Data\obj\Debug\net8.0\HotelManagementSystem.Services.Data.pdb
 D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Services.Data\obj\Debug\net8.0\ref\HotelManagementSystem.Services.Data.dll
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Services.Data\bin\Debug\net8.0\HotelManagementSystem.Common.dll
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Services.Data\bin\Debug\net8.0\HotelManagementSystem.Data.dll
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Services.Data\bin\Debug\net8.0\HotelManagementSystem.Data.Models.dll
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Services.Data\bin\Debug\net8.0\HotelManagementSystem.Web.ViewModels.dll
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Services.Data\bin\Debug\net8.0\HotelManagementSystem.Data.Models.pdb
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Services.Data\bin\Debug\net8.0\HotelManagementSystem.Data.pdb
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Services.Data\bin\Debug\net8.0\HotelManagementSystem.Web.ViewModels.pdb
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Services.Data\bin\Debug\net8.0\HotelManagementSystem.Common.pdb
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Services.Data\obj\Debug\net8.0\HotelManagementSystem.Services.Data.csproj.AssemblyReference.cache
+D:\New folder\snimki telefon 2018\ASP.NET Advanced - октомври 2024\HotelManagementSystem\HotelManagementSystem.Services.Data\obj\Debug\net8.0\HotelMan.99F78CD5.Up2Date

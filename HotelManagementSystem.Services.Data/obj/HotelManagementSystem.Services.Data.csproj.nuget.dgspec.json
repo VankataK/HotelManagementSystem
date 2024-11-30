@@ -142,6 +142,80 @@
         }
       }
     },
+    "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Data\\HotelManagementSystem.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Data\\HotelManagementSystem.Data.csproj",
+        "projectName": "HotelManagementSystem.Data",
+        "projectPath": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Data\\HotelManagementSystem.Data.csproj",
+        "packagesPath": "C:\\Users\\ivank\\.nuget\\packages\\",
+        "outputPath": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ivank\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Data.Models\\HotelManagementSystem.Data.Models.csproj": {
+                "projectPath": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Data.Models\\HotelManagementSystem.Data.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Services.Data\\HotelManagementSystem.Services.Data.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -172,8 +246,78 @@
             "projectReferences": {
               "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Data.Models\\HotelManagementSystem.Data.Models.csproj": {
                 "projectPath": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Data.Models\\HotelManagementSystem.Data.Models.csproj"
+              },
+              "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Data\\HotelManagementSystem.Data.csproj": {
+                "projectPath": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Data\\HotelManagementSystem.Data.csproj"
+              },
+              "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Web.ViewModels\\HotelManagementSystem.Web.ViewModels.csproj": {
+                "projectPath": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Web.ViewModels\\HotelManagementSystem.Web.ViewModels.csproj"
               }
             }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Web.ViewModels\\HotelManagementSystem.Web.ViewModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Web.ViewModels\\HotelManagementSystem.Web.ViewModels.csproj",
+        "projectName": "HotelManagementSystem.Web.ViewModels",
+        "projectPath": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Web.ViewModels\\HotelManagementSystem.Web.ViewModels.csproj",
+        "packagesPath": "C:\\Users\\ivank\\.nuget\\packages\\",
+        "outputPath": "D:\\New folder\\snimki telefon 2018\\ASP.NET Advanced - октомври 2024\\HotelManagementSystem\\HotelManagementSystem.Web.ViewModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ivank\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
           }
         },
         "warningProperties": {

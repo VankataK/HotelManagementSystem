@@ -3104,7 +3104,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "HotelManagementSystem.Data.Models": "1.0.0"
+          "HotelManagementSystem.Data": "1.0.0",
+          "HotelManagementSystem.Data.Models": "1.0.0",
+          "HotelManagementSystem.Web.ViewModels": "1.0.0"
         },
         "compile": {
           "bin/placeholder/HotelManagementSystem.Services.Data.dll": {}
