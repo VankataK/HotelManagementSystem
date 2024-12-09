@@ -22,7 +22,7 @@
         <a asp-action="Index" class="btn btn-secondary">Back to Rooms</a>
         @if (User.Identity!.IsAuthenticated)
         {
-            <a asp-controller="Reservation" asp-action="Make" class="btn btn-primary">Make Reservation</a>
+            <a asp-controller="Reservation" asp-action="Make" asp-route-roomId="@Model.Id" class="btn btn-primary">Make Reservation</a>
         }
     </div>
 </div>

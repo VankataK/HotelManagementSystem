@@ -26,6 +26,7 @@
         {
             public const string TotalPriceMinValue = "0";
             public const string TotalPriceMaxValue = "150000";
+            public const string ReservationDateFormat = "yyyy-MM-dd";
         }
 
         public static class User

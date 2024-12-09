@@ -1,0 +1,122 @@
+﻿@using HotelManagementSystem.Web.ViewModels.Reservation
+@using static HotelManagementSystem.Common.EntityValidationConstants.Reservation;
+@model AddReservationFormModel
+@{
+    ViewData["Title"] = "Create Reservation";
+}
+
+<h2>Create a Reservation</h2>
+
+<form asp-action="Make" method="post">
+    <div class="mb-3">
+        <label class="form-label">Room</label>
+        <input type="text" class="form-control" value="Room @Model.Room.RoomNumber" readonly />
+        <input asp-for="Room.Id" type="hidden" id="roomId" />
+        <input asp-for="Room.RoomNumber" type="hidden"/>
+        <input asp-for="Room.PricePerNight" type="hidden"/>
+    </div>
+
+    <div class="mb-3">
+        <label for="checkInDate" class="form-label">Check-In Date</label>
+        <input asp-for="CheckInDate" class="form-control" id="checkInDate" readonly>
+        <span asp-validation-for="CheckInDate" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="checkOutDate" class="form-label">Check-Out Date</label>
+        <input asp-for="CheckOutDate" class="form-control" id="checkOutDate" readonly>
+        <span asp-validation-for="CheckOutDate" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="TotalPrice" class="form-label">Total Price</label>
+        <input asp-for="TotalPrice" type="text" class="form-control" id="totalPrice" readonly  />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<a asp-controller="Room" asp-action="Details" asp-route-roomId="@Model.Room.Id">Back to Room Details</a>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<script>
+    var $j = jQuery.noConflict();
+    
+    $j(document).ready(function () {
+        const roomId = $('#roomId').val();
+        let unavailableDates = [];
+
+        function loadUnavailableDates() {
+            console.log("Loading unavailable dates for room ID:", roomId);
+            return $j.ajax({
+                url: '/Reservation/GetUnavailableDates',
+                data: { roomId },
+                method: 'GET',
+                success: function (dates) {
+                    console.log("Unavailable dates received:", dates);
+                    unavailableDates = dates.map(date => new Date(date).toISOString().split('T')[0]);
+                },
+                error: function () {
+                    alert('Failed to load unavailable dates.');
+                }
+            });
+        }
+
+        function initializeDatepickers() {
+            console.log("Initializing datepickers...");
+            $j('#checkInDate').datepicker({
+                dateFormat: 'yy-mm-dd',
+                beforeShowDay: function (date) {
+                    const formattedDate = $j.datepicker.formatDate('yy-mm-dd', date);
+                    return [!unavailableDates.includes(formattedDate)];
+                },
+                onSelect: function (selectedDate) {
+                    console.log("Selected Check-In Date:", selectedDate);
+                    const checkInDate = new Date(selectedDate);
+                    $('#checkOutDate').datepicker('option', 'minDate', new Date(checkInDate.getTime() + 86400000));
+                }
+            });
+
+            $j('#checkOutDate').datepicker({
+                dateFormat: 'yy-mm-dd',
+                beforeShowDay: function (date) {
+                    const formattedDate = $j.datepicker.formatDate('yy-mm-dd', date);
+                    return [!unavailableDates.includes(formattedDate)];
+                }
+            });
+            console.log("Datepickers initialized.");
+        }
+
+        function calculatePrice() {
+            const checkInDate = $j('#checkInDate').val();
+            const checkOutDate = $j('#checkOutDate').val();
+
+            if (roomId && checkInDate && checkOutDate) {
+                $j.ajax({
+                    url: '/Reservation/CalculatePrice',
+                    data: { roomId, checkInDate, checkOutDate },
+                    success: function (response) {
+                        $j('#totalPrice').val(response.totalPrice.toFixed(2));
+                    },
+                    error: function (xhr) {
+                        alert(xhr.responseText || 'Failed to calculate the total price.');
+                        $j('#totalPrice').val('');
+                    }
+                });
+            }
+        }
+
+        loadUnavailableDates().done(function () {
+            initializeDatepickers();
+        });
+
+        calculatePrice();
+
+        $j('#checkInDate, #checkOutDate').on('change', function () {
+            calculatePrice();
+        });
+    });
+</script>
+

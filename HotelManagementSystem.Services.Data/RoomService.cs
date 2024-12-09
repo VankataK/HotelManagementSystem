@@ -58,5 +58,24 @@ namespace HotelManagementSystem.Services.Data
             return viewModel;
         }
 
+        public async Task<AddRoomToReservationViewModel?> GetRoomForReservationByIdAsync(Guid id)
+        {
+            Room? room = await this.roomRepository
+                .GetAllAttached()
+                .FirstOrDefaultAsync(c => c.Id == id);
+
+            AddRoomToReservationViewModel? viewModel = null;
+            if (room != null)
+            {
+                viewModel = new AddRoomToReservationViewModel()
+                {
+                    Id = room.Id.ToString(),
+                    RoomNumber = room.RoomNumber,
+                    PricePerNight = room.PricePerNight
+                };
+            }
+
+            return viewModel;
+        }
     }
 }

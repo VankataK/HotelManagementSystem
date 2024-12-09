@@ -7,5 +7,7 @@ namespace HotelManagementSystem.Services.Data.Interfaces
         Task<IEnumerable<RoomIndexViewModel>> IndexGetAllOrderedByRoomNumberAsync();
 
         Task<RoomDetailsViewModel?> GetRoomDetailsByIdAsync(Guid id);
+
+        Task<AddRoomToReservationViewModel?> GetRoomForReservationByIdAsync(Guid id);
     }
 }

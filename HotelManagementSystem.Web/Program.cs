@@ -1,5 +1,7 @@
 using HotelManagementSystem.Data;
 using HotelManagementSystem.Data.Models;
+using HotelManagementSystem.Data.Repository.Interfaces;
+using HotelManagementSystem.Data.Repository;
 using HotelManagementSystem.Services.Data.Interfaces;
 using HotelManagementSystem.Web.Infrastructure.Extensions;
 using Microsoft.AspNetCore.Identity;
@@ -25,6 +27,7 @@ namespace HotelManagementSystem.Web
                 .AddEntityFrameworkStores<HotelManagmentDbContext>();
 
             builder.Services.RegisterRepositories(typeof(ApplicationUser).Assembly);
+            builder.Services.AddScoped<IRoomAvailabilityRepository, RoomAvailabilityRepository>();
             builder.Services.RegisterUserDefinedServices(typeof(IBaseService).Assembly);
 
             builder.Services.AddControllersWithViews();
