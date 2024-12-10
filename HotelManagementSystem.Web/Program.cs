@@ -6,6 +6,7 @@ using HotelManagementSystem.Services.Data.Interfaces;
 using HotelManagementSystem.Web.Infrastructure.Extensions;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
 
 namespace HotelManagementSystem.Web
 {
@@ -15,6 +16,11 @@ namespace HotelManagementSystem.Web
         {
             WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
             string connectionString = builder.Configuration.GetConnectionString("DefaultConnection")!;
+            string adminEmail = builder.Configuration.GetValue<string>("Administrator:Email")!;
+            string adminUsername = builder.Configuration.GetValue<string>("Administrator:Username")!;
+            string adminPassword = builder.Configuration.GetValue<string>("Administrator:Password")!;
+            string adminFirstName = builder.Configuration.GetValue<string>("Administrator:FirstName")!;
+            string adminLastName = builder.Configuration.GetValue<string>("Administrator:LastName")!;
 
             builder.Services.AddDbContext<HotelManagmentDbContext>(options => 
                 options.UseSqlServer(connectionString));
@@ -24,23 +30,30 @@ namespace HotelManagementSystem.Web
                 {
                     ConfigureIdentity(builder, cfg);
                 })
-                .AddEntityFrameworkStores<HotelManagmentDbContext>();
+                .AddEntityFrameworkStores<HotelManagmentDbContext>()
+                .AddRoles<IdentityRole<Guid>>()
+                .AddSignInManager<SignInManager<ApplicationUser>>()
+                .AddUserManager<UserManager<ApplicationUser>>();
+
+            builder.Services.ConfigureApplicationCookie(cfg =>
+            {
+                cfg.LoginPath = "/Identity/Account/Login";
+            });
 
             builder.Services.RegisterRepositories(typeof(ApplicationUser).Assembly);
             builder.Services.AddScoped<IRoomAvailabilityRepository, RoomAvailabilityRepository>();
             builder.Services.RegisterUserDefinedServices(typeof(IBaseService).Assembly);
 
-            builder.Services.AddControllersWithViews();
+            builder.Services.AddControllersWithViews(cfg =>
+            {
+                cfg.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+            });
             builder.Services.AddRazorPages();
 
             WebApplication app = builder.Build();
 
             // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseMigrationsEndPoint();
-            }
-            else
+            if(!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
@@ -53,8 +66,33 @@ namespace HotelManagementSystem.Web
             app.UseRouting();
 
             app.UseAuthentication();
+            app.Use((context, next) =>
+            {
+                if (context.User.Identity?.IsAuthenticated == true && context.Request.Path == "/")
+                {
+                    if (context.User.IsInRole("Admin"))
+                    {
+                        context.Response.Redirect("/Admin/Home/Index");
+                        return Task.CompletedTask;
+                    }
+                }
+                return next();
+            });
             app.UseAuthorization();
 
+            app.UseStatusCodePagesWithRedirects("/Home/Error/{0}");
+
+            if (app.Environment.IsDevelopment())
+            {
+                app.SeedAdministrator(adminEmail, adminUsername, adminPassword, adminFirstName, adminLastName);
+            }
+
+            app.MapControllerRoute(
+                name: "Areas",
+                pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+            app.MapControllerRoute(
+                name: "Errors",
+                pattern: "{controller=Home}/{action=Index}/{statusCode?}");
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");

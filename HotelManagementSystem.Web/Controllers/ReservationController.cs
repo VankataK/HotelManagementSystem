@@ -14,7 +14,8 @@ namespace HotelManagementSystem.Web.Controllers
         private readonly IReservationService reservationService;
         private readonly IRoomService roomService;
 
-        public ReservationController(IReservationService reservationService, IRoomService roomService)
+        public ReservationController(IReservationService reservationService, IRoomService roomService, IReceptionistService receptionistService)
+            :base(receptionistService)
         {
             this.reservationService = reservationService;
             this.roomService = roomService;

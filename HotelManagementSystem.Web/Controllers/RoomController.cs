@@ -8,7 +8,8 @@ namespace HotelManagementSystem.Web.Controllers
     {
         private readonly IRoomService roomService;
 
-        public RoomController(IRoomService roomService)
+        public RoomController(IRoomService roomService, IReceptionistService receptionistService)
+            :base(receptionistService)
         {
             this.roomService = roomService;
         }

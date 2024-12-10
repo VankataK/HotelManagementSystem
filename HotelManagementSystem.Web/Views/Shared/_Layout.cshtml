@@ -1,4 +1,8 @@
-﻿@using static HotelManagementSystem.Common.ApplicationConstants;
+﻿@using HotelManagementSystem.Services.Data.Interfaces;
+@using HotelManagementSystem.Web.Infrastructure.Extensions;
+@using static HotelManagementSystem.Common.ApplicationConstants;
+
+@inject IReceptionistService receptionistService
 @{
     int currentYear = DateTime.UtcNow.Year;
     string footerNote = (ReleaseYear == currentYear) ?
@@ -29,10 +33,29 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
+                        @if (this.User?.Identity?.IsAuthenticated ?? false)
+                        {
+                            @if (await this.receptionistService.IsUserReceptionistAsync(this.User.GetId()))
+                            {
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-dark" href="#" id="receptionistDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Receptionist
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="receptionistDropdown">
+                                        <li>
+                                            <a class="dropdown-item" asp-area="" asp-controller="Reservation" asp-action="Manage">Manage Reservations</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" asp-area="" asp-controller="ExtraService" asp-action="Manage">Manage Extra services</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            }
+                        }
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Room" asp-action="Index">All Rooms</a>
                         </li>
-                        @if (User.Identity?.IsAuthenticated ?? false)
+                        @if (this.User?.Identity?.IsAuthenticated ?? false)
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Reservation" asp-action="Mine">My Reservations</a>
