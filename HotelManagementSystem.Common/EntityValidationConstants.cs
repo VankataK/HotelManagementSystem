@@ -29,6 +29,12 @@
             public const string ReservationDateFormat = "yyyy-MM-dd";
         }
 
+        public static class Receptionist
+        {
+            public const int PhoneNumberMinLength = 6;
+            public const int PhoneNumberMaxLength = 15;
+        }
+
         public static class User
         {
             public const int FirstNameMinLength = 1;

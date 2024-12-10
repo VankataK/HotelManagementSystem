@@ -25,6 +25,8 @@ namespace HotelManagementSystem.Data
 
         public DbSet<Reservation> Reservations { get; set; } = null!;
 
+        public virtual DbSet<Receptionist> Receptionists { get; set; } = null!;
+
         public DbSet<ExtraService> ExtraServices { get; set; } = null!;
 
         public DbSet<ReservationExtraService> ReservationsExtraServices { get; set; } = null!;

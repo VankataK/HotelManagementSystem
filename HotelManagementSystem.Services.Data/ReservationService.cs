@@ -25,6 +25,7 @@ namespace HotelManagementSystem.Services.Data
         {
             IEnumerable<ReservationIndexViewModel> reservations = await this.reservationRepository
                 .GetAllAttached()
+                .Where(r => r.IsDeleted == false)
                 .Where(r => r.GuestId.ToString() == userId)
                 .Include(r => r.Room)
                 .OrderBy(r => r.CheckInDate)
@@ -34,8 +35,7 @@ namespace HotelManagementSystem.Services.Data
                     RoomNumber = r.Room.RoomNumber,
                     CheckInDate = r.CheckInDate.ToString("dd MMMM yyyy"),
                     CheckOutDate = r.CheckOutDate.ToString("dd MMMM yyyy"),
-                    TotalPrice = r.TotalPrice,
-                    Status = r.Status,
+                    TotalPrice = r.TotalPrice
                 })
                 .ToListAsync();
 

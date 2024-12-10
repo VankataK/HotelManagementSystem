@@ -2,7 +2,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
-using static HotelManagementSystem.Common.ReservationStatusConstants;
 
 namespace HotelManagementSystem.Data.Models
 {
@@ -46,10 +45,8 @@ namespace HotelManagementSystem.Data.Models
         [Comment("Reservation price")]
         public decimal TotalPrice { get; set; }
 
-        [Required]
-        [DefaultValue(Pending)]
-        [Comment("Reservation status")]
-        public string Status { get; set; } = Pending;
+        [DefaultValue(false)]
+        public bool IsDeleted { get; set; }
 
         public ICollection<ReservationExtraService> ReservationsExtraServices { get; set; } = new List<ReservationExtraService>();
     }

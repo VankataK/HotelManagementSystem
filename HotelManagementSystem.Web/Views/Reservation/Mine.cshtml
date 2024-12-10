@@ -1,5 +1,4 @@
 ﻿@using HotelManagementSystem.Web.ViewModels.Reservation
-@using static HotelManagementSystem.Common.ReservationStatusConstants
 @model IEnumerable<ReservationIndexViewModel>
 
 <h2>Reservations</h2>
@@ -9,7 +8,6 @@
             <th scope="col">Room</th>
             <th scope="col">Check-In</th>
             <th scope="col">Check-Out</th>
-            <th scope="col">Status</th>
             <th scope="col">Actions</th>
         </tr>
     </thead>
@@ -21,41 +19,7 @@
                 <td>@reservation.CheckInDate</td>
                 <td>@reservation.CheckOutDate</td>
                 <td>
-                    @if (reservation.Status == Pending)
-                    {
-                        <span class="badge bg-warning">@reservation.Status</span>
-                    }
-                    else if (reservation.Status == Confirmed)
-                    {
-                        <span class="badge bg-success">@reservation.Status</span>
-                    }
-                    else if (reservation.Status == Cancelled)
-                    {
-                        <span class="badge bg-danger">@reservation.Status</span>
-                    }
-                    else if (reservation.Status == CheckedIn)
-                    {
-                        <span class="badge bg-primary">@reservation.Status</span>
-                    }
-                    else if (reservation.Status == CheckedOut)
-                    {
-                        <span class="badge bg-secondary">@reservation.Status</span>
-                    }
-                </td>
-                <td>
-                    @if (reservation.Status == Pending)
-                    {
-                        <a asp-action="Confirm" asp-route-id="@reservation.Id" class="btn btn-success btn-sm">Confirm</a>
-                        <a asp-action="Cancel" asp-route-id="@reservation.Id" class="btn btn-danger btn-sm">Cancel</a>
-                    }
-                    else if (reservation.Status == Confirmed)
-                    {
-                        <a asp-action="CheckIn" asp-route-id="@reservation.Id" class="btn btn-primary btn-sm">Check In</a>
-                    }
-                    else if (reservation.Status == CheckedIn)
-                    {
-                        <a asp-action="CheckOut" asp-route-id="@reservation.Id" class="btn btn-secondary btn-sm">Check Out</a>
-                    }
+                    <a asp-action="Cancel" asp-route-id="@reservation.Id" class="btn btn-danger btn-sm">Cancel</a>
                 </td>
             </tr>
         }

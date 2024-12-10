@@ -4,6 +4,7 @@ using HotelManagementSystem.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HotelManagementSystem.Data.Migrations
 {
     [DbContext(typeof(HotelManagmentDbContext))]
-    partial class HotelManagmentDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241210151102_RemoveStatus")]
+    partial class RemoveStatus
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -176,63 +179,39 @@ namespace HotelManagementSystem.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("d674c587-ce6c-404d-ae3f-8569a55aba98"),
+                            Id = new Guid("e69e0bfb-2bc1-4ab3-a953-b3ea17da3320"),
                             Description = "Delicious breakfast served daily.",
                             Price = 30.00m,
                             ServiceName = "Breakfast"
                         },
                         new
                         {
-                            Id = new Guid("f969ebdc-85f9-48ba-9905-6b35a871e9d4"),
+                            Id = new Guid("b6a876f5-62ac-4768-be90-25bd3eb0e206"),
                             Description = "Comfortable transport to and from the airport.",
                             Price = 50.00m,
                             ServiceName = "Airport Transfer"
                         },
                         new
                         {
-                            Id = new Guid("bc948208-dca0-42a1-9efb-467dddd9f79f"),
+                            Id = new Guid("9ce37192-fe27-4063-b906-befb5156ef14"),
                             Description = "Relax with our exclusive spa treatments.",
                             Price = 100.00m,
                             ServiceName = "Spa Package"
                         },
                         new
                         {
-                            Id = new Guid("e59b1595-81aa-4d28-9e2c-3aa1b779896e"),
+                            Id = new Guid("f1fcc36d-6ba8-4f3b-8e1c-3ddfeb230ac0"),
                             Description = "Order meals and drinks to your room.",
                             Price = 20.00m,
                             ServiceName = "Room Service"
                         },
                         new
                         {
-                            Id = new Guid("ab99f751-a472-4b85-991e-22aec5e0bf68"),
+                            Id = new Guid("398d06db-2f26-47b2-aae7-c9d8fa2b24f7"),
                             Description = "Extend your stay until 2 PM.",
                             Price = 15.00m,
                             ServiceName = "Late Checkout"
                         });
-                });
-
-            modelBuilder.Entity("HotelManagementSystem.Data.Models.Receptionist", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier")
-                        .HasComment("Receptionist Identifier");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier")
-                        .HasComment("User id of the receptionist");
-
-                    b.Property<string>("WorkPhoneNumber")
-                        .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)")
-                        .HasComment("Receptionist work phone number");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Receptionists");
                 });
 
             modelBuilder.Entity("HotelManagementSystem.Data.Models.Reservation", b =>
@@ -253,9 +232,6 @@ namespace HotelManagementSystem.Data.Migrations
                     b.Property<Guid>("GuestId")
                         .HasColumnType("uniqueidentifier")
                         .HasComment("User id of the guest");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
 
                     b.Property<DateTime>("ReservationDate")
                         .HasColumnType("datetime2")
@@ -326,9 +302,6 @@ namespace HotelManagementSystem.Data.Migrations
                         .HasColumnType("nvarchar(2083)")
                         .HasComment("Room image url");
 
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
                     b.Property<int>("MaxCapacity")
                         .HasColumnType("int")
                         .HasComment("Capacity of the room");
@@ -352,55 +325,50 @@ namespace HotelManagementSystem.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("7a09b20f-c1a7-44d8-97ca-70f71f27f3d6"),
+                            Id = new Guid("2fb5aa5e-5411-4eb9-b6f5-b08cecb6599a"),
                             CategoryId = 1,
                             Description = "This room is located on the first floor of the hotel and has hot / cold air conditioned, a furnished balcony and free WI FI.",
                             ImageUrl = "https://webbox.imgix.net/images/owvecfmxulwbfvxm/c56a0c0d-8454-431a-9b3e-f420c72e82e3.jpg?auto=format,compress&fit=crop&crop=entropy",
-                            IsDeleted = false,
                             MaxCapacity = 1,
                             PricePerNight = 70.00m,
                             RoomNumber = "101"
                         },
                         new
                         {
-                            Id = new Guid("97347f36-512e-450e-bbd6-668f5e8f14b4"),
+                            Id = new Guid("20df2a82-6377-4441-b356-34fe3a89c732"),
                             CategoryId = 2,
                             Description = "Stylishly designed, this double room offers comfort and functionality for a memorable stay.",
                             ImageUrl = "https://media.hotel7dublin.com/image/upload/f_auto,g_auto,c_auto,w_3840,q_auto/v1708595213/Uploads/Hotel7/Cosy_Room_Hero_643fdf08b9.jpg",
-                            IsDeleted = false,
                             MaxCapacity = 2,
                             PricePerNight = 120.00m,
                             RoomNumber = "102"
                         },
                         new
                         {
-                            Id = new Guid("4920eb5f-0df2-4da4-8007-5dfd6947a6df"),
+                            Id = new Guid("3558dc9a-a0c5-43a2-910c-2eb3618e543b"),
                             CategoryId = 2,
                             Description = "Designed for convenience, this room features two comfortable twin beds, ideal for friends or colleagues.",
                             ImageUrl = "https://media.hotel7dublin.com/image/upload/f_auto,g_auto,c_auto,w_3840,q_auto/v1708601916/Uploads/Hotel7/Twin_Room_Hero_07817fcfab.jpg",
-                            IsDeleted = false,
                             MaxCapacity = 2,
                             PricePerNight = 110.00m,
                             RoomNumber = "103"
                         },
                         new
                         {
-                            Id = new Guid("b47e8930-7ff2-433e-a9ed-b8614bc88000"),
+                            Id = new Guid("c2b46508-1577-4fef-a5a2-8b34d11ff002"),
                             CategoryId = 3,
                             Description = "A spacious room designed for families, offering a combination of beds to accommodate up to four guests.",
                             ImageUrl = "https://manorhousecountryhotel.s3-assets.com/executive-family-room-main.png",
-                            IsDeleted = false,
                             MaxCapacity = 4,
                             PricePerNight = 250.00m,
                             RoomNumber = "104"
                         },
                         new
                         {
-                            Id = new Guid("be60d08e-2ccc-42b2-88bc-b79a50afdfa0"),
+                            Id = new Guid("eaec7ee7-c9d5-46b6-8704-f3ba6e023bc6"),
                             CategoryId = 5,
                             Description = "Indulge in opulence with this expansive suite, featuring a private lounge and top-tier furnishings.",
                             ImageUrl = "https://www.manila-hotel.com.ph/wp-content/uploads/2023/07/TMH_Presidential-Suite_Bedroom-1024x682.jpg",
-                            IsDeleted = false,
                             MaxCapacity = 6,
                             PricePerNight = 7000.00m,
                             RoomNumber = "501"
@@ -558,17 +526,6 @@ namespace HotelManagementSystem.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
-                });
-
-            modelBuilder.Entity("HotelManagementSystem.Data.Models.Receptionist", b =>
-                {
-                    b.HasOne("HotelManagementSystem.Data.Models.ApplicationUser", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("HotelManagementSystem.Data.Models.Reservation", b =>

@@ -33,10 +33,10 @@
         <input asp-for="TotalPrice" type="text" class="form-control" id="totalPrice" readonly  />
     </div>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary mb-1">Submit</button>
 </form>
 
-<a asp-controller="Room" asp-action="Details" asp-route-roomId="@Model.Room.Id">Back to Room Details</a>
+<a asp-controller="Room" asp-action="Details" asp-route-roomId="@Model.Room.Id" class="btn btn-secondary">Back to Room Details</a>
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">

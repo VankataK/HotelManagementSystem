@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using static HotelManagementSystem.Common.EntityValidationConstants.Room;
@@ -41,6 +42,9 @@ namespace HotelManagementSystem.Data.Models
         [Required]
         [Comment("Capacity of the room")]
         public int MaxCapacity { get; set; }
+
+        [DefaultValue(false)]
+        public bool IsDeleted { get; set; }
 
         public ICollection<Reservation> Reservations { get; set; } = new List<Reservation>();
     }

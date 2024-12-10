@@ -19,6 +19,7 @@ namespace HotelManagementSystem.Services.Data
         {
             IEnumerable<RoomIndexViewModel> rooms = await this.roomRepository
                 .GetAllAttached()
+                .Where(r => r.IsDeleted == false)
                 .OrderBy(r => r.RoomNumber)
                 .Select(r => new RoomIndexViewModel()
                 {
@@ -38,6 +39,7 @@ namespace HotelManagementSystem.Services.Data
             Room? room = await this.roomRepository
                 .GetAllAttached()
                 .Include(r => r.Category)
+                .Where(r => r.IsDeleted == false)
                 .FirstOrDefaultAsync(c => c.Id == id);
 
             RoomDetailsViewModel? viewModel = null;
@@ -62,6 +64,7 @@ namespace HotelManagementSystem.Services.Data
         {
             Room? room = await this.roomRepository
                 .GetAllAttached()
+                .Where(r => r.IsDeleted == false)
                 .FirstOrDefaultAsync(c => c.Id == id);
 
             AddRoomToReservationViewModel? viewModel = null;
