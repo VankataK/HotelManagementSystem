@@ -12,12 +12,9 @@ namespace HotelManagementSystem.Web.Areas.Admin.Controllers
     [Authorize(Roles = AdminRoleName)]
     public class UserManagementController : BaseController
     {
-        private readonly IUserService userService;
-
-        public UserManagementController(IUserService userService, IReceptionistService receptionistService)
-            : base(receptionistService)
+        public UserManagementController(IUserService userService)
+            : base(userService)
         {
-            this.userService = userService;
         }
 
         [HttpGet]

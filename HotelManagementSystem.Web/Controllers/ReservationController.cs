@@ -14,8 +14,8 @@ namespace HotelManagementSystem.Web.Controllers
         private readonly IReservationService reservationService;
         private readonly IRoomService roomService;
 
-        public ReservationController(IReservationService reservationService, IRoomService roomService, IReceptionistService receptionistService)
-            :base(receptionistService)
+        public ReservationController(IReservationService reservationService, IRoomService roomService, IUserService userService)
+            :base(userService)
         {
             this.reservationService = reservationService;
             this.roomService = roomService;
@@ -87,6 +87,22 @@ namespace HotelManagementSystem.Web.Controllers
             }
 
             return RedirectToAction(nameof(Mine));
+        }
+
+        [HttpGet]
+        [Authorize]
+        public async Task<IActionResult> Manage()
+        {
+            bool isReceptionist = await this.IsUserReceptionistAsync();
+            if (!isReceptionist)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
+
+            IEnumerable<ReservationIndexViewModel> reservations =
+                await this.reservationService.GetAllOrderedByCheckInAsync();
+
+            return this.View(reservations);
         }
 
         [HttpGet]

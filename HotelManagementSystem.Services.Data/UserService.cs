@@ -143,5 +143,16 @@ namespace HotelManagementSystem.Services.Data
 
             return $"{user.FirstName} {user.LastName}";
         }
+
+        public async Task<bool> IsUserReceptionistAsync(string userId)
+        {
+            var user = await userManager.FindByIdAsync(userId);
+            if (user == null)
+            {
+                return false;
+            }
+
+            return await userManager.IsInRoleAsync(user, "Receptionist");
+        }
     }
 }

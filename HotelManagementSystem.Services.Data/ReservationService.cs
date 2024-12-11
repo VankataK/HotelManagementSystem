@@ -21,6 +21,26 @@ namespace HotelManagementSystem.Services.Data
             this.roomAvailabilityRepository = roomAvailabilityRepository;
         }
 
+        public async Task<IEnumerable<ReservationIndexViewModel>> GetAllOrderedByCheckInAsync()
+        {
+            IEnumerable<ReservationIndexViewModel> reservations = await this.reservationRepository
+                .GetAllAttached()
+                .Where(r => r.IsDeleted == false)
+                .Include(r => r.Room)
+                .OrderBy(r => r.CheckInDate)
+                .Select(r => new ReservationIndexViewModel()
+                {
+                    Id = r.Id.ToString(),
+                    RoomNumber = r.Room.RoomNumber,
+                    CheckInDate = r.CheckInDate.ToString(ReservationDateFormat),
+                    CheckOutDate = r.CheckOutDate.ToString(ReservationDateFormat),
+                    TotalPrice = r.TotalPrice
+                })
+                .ToListAsync();
+
+            return reservations;
+        }
+
         public async Task<IEnumerable<ReservationIndexViewModel>> GetAllByUserIdOrderedByCheckInAsync(string userId)
         {
             IEnumerable<ReservationIndexViewModel> reservations = await this.reservationRepository
@@ -33,8 +53,8 @@ namespace HotelManagementSystem.Services.Data
                 {
                     Id = r.Id.ToString(),
                     RoomNumber = r.Room.RoomNumber,
-                    CheckInDate = r.CheckInDate.ToString("dd MMMM yyyy"),
-                    CheckOutDate = r.CheckOutDate.ToString("dd MMMM yyyy"),
+                    CheckInDate = r.CheckInDate.ToString(ReservationDateFormat),
+                    CheckOutDate = r.CheckOutDate.ToString(ReservationDateFormat),
                     TotalPrice = r.TotalPrice
                 })
                 .ToListAsync();

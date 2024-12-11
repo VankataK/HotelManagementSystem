@@ -84,6 +84,7 @@ namespace HotelManagementSystem.Web
 
             if (app.Environment.IsDevelopment())
             {
+                app.SeedRoles();
                 app.SeedAdministrator(adminEmail, adminUsername, adminPassword, adminFirstName, adminLastName);
             }
 

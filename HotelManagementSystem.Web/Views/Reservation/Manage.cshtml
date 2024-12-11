@@ -1,7 +1,14 @@
 ﻿@using HotelManagementSystem.Web.ViewModels.Reservation
 @model IEnumerable<ReservationIndexViewModel>
 
-<h2 class="my-4 text-center">Reservations</h2>
+<h2 class="my-4 text-center">Manage Reservations</h2>
+
+<div class="d-flex justify-content-end mb-4">
+    <a asp-action="Create" class="btn btn-success btn-lg">
+        <i class="bi bi-plus-circle"></i> Add New Reservation
+    </a>
+</div>
+
 <table class="table">
     <thead class="thead-light">
         <tr>
@@ -18,8 +25,13 @@
                 <td>@reservation.RoomNumber</td>
                 <td>@reservation.CheckInDate</td>
                 <td>@reservation.CheckOutDate</td>
-                <td>
-                    <a asp-action="Cancel" asp-route-id="@reservation.Id" class="btn btn-danger btn-sm">Cancel</a>
+                <td class="text-center">
+                    <a asp-action="Edit" asp-route-id="@reservation.Id" class="btn btn-warning btn-sm me-2">
+                        <i class="bi bi-pencil-square"></i> Edit
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@reservation.Id" class="btn btn-danger btn-sm">
+                        <i class="bi bi-trash"></i> Delete
+                    </a>
                 </td>
             </tr>
         }

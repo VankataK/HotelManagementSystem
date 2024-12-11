@@ -3,28 +3,44 @@ using static HotelManagementSystem.Common.ApplicationConstants;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace HotelManagementSystem.Web.Infrastructure.Extensions
 {
     public static class ApplicationBuilderExtensions
     {
+        public static void SeedRoles(this IApplicationBuilder app)
+        {
+            using IServiceScope serviceScope = app.ApplicationServices.CreateAsyncScope();
+            IServiceProvider serviceProvider = serviceScope.ServiceProvider;
+
+            var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole<Guid>>>();
+
+            string[] roles = { AdminRoleName, ReceptionistRoleName };
+
+            foreach (var role in roles)
+            {
+                var roleExists = roleManager.RoleExistsAsync(role).GetAwaiter().GetResult();
+                if (!roleExists)
+                {
+                    var result = roleManager.CreateAsync(new IdentityRole<Guid> { Name = role }).GetAwaiter().GetResult();
+                    if (!result.Succeeded)
+                    {
+                        throw new Exception($"Failed to create role: {role}");
+                    }
+                }
+            }
+        }
+
         public static IApplicationBuilder SeedAdministrator(this IApplicationBuilder app, string email, string username, string password, string firstName, string lastName)
         {
             using IServiceScope serviceScope = app.ApplicationServices.CreateAsyncScope();
             IServiceProvider serviceProvider = serviceScope.ServiceProvider;
 
-            RoleManager<IdentityRole<Guid>>? roleManager = serviceProvider
-                .GetService<RoleManager<IdentityRole<Guid>>>();
             IUserStore<ApplicationUser>? userStore = serviceProvider
                 .GetService<IUserStore<ApplicationUser>>();
             UserManager<ApplicationUser>? userManager = serviceProvider
                 .GetService<UserManager<ApplicationUser>>();
-
-            if (roleManager == null)
-            {
-                throw new ArgumentNullException(nameof(roleManager),
-                    $"Service for {typeof(RoleManager<IdentityRole<Guid>>)} cannot be obtained!");
-            }
 
             if (userStore == null)
             {
@@ -40,23 +56,6 @@ namespace HotelManagementSystem.Web.Infrastructure.Extensions
 
             Task.Run(async () =>
             {
-                bool roleExists = await roleManager.RoleExistsAsync(AdminRoleName);
-                IdentityRole<Guid>? adminRole = null;
-                if (!roleExists)
-                {
-                    adminRole = new IdentityRole<Guid>(AdminRoleName);
-
-                    IdentityResult result = await roleManager.CreateAsync(adminRole);
-                    if (!result.Succeeded)
-                    {
-                        throw new InvalidOperationException($"Error occurred while creating the {AdminRoleName} role!");
-                    }
-                }
-                else
-                {
-                    adminRole = await roleManager.FindByNameAsync(AdminRoleName);
-                }
-
                 ApplicationUser? adminUser = await userManager.FindByEmailAsync(email);
                 if (adminUser == null)
                 {

@@ -17,5 +17,7 @@ namespace HotelManagementSystem.Services.Data.Interfaces
         Task<string> GetFullNameByEmailAsync(string email);
 
         Task<string> GetFullNameByIdAsync(Guid userId);
+
+        Task<bool> IsUserReceptionistAsync(string userId);
     }
 }

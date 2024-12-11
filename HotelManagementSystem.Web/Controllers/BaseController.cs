@@ -2,16 +2,17 @@
 using HotelManagementSystem.Web.Infrastructure.Extensions;
 using static HotelManagementSystem.Common.ApplicationConstants;
 using Microsoft.AspNetCore.Mvc;
+using static HotelManagementSystem.Common.EntityValidationConstants;
 
 namespace HotelManagementSystem.Web.Controllers
 {
     public class BaseController : Controller
     {
-        protected readonly IReceptionistService receptionistService;
+        protected readonly IUserService userService;
 
-        public BaseController(IReceptionistService receptionistService)
+        public BaseController(IUserService userService)
         {
-            this.receptionistService = receptionistService;
+            this.userService = userService;
         }
 
         protected bool IsGuidValid(string? id, ref Guid parsedGuid)
@@ -35,7 +36,11 @@ namespace HotelManagementSystem.Web.Controllers
         protected async Task<bool> IsUserReceptionistAsync()
         {
             string? userId = this.User.GetId();
-            bool isReceptionist = await this.receptionistService
+            if (userId == null)
+            {
+                return false;
+            }
+            bool isReceptionist = await this.userService
                 .IsUserReceptionistAsync(userId);
 
             return isReceptionist;
