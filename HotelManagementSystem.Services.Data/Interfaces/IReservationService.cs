@@ -1,4 +1,5 @@
 ﻿using HotelManagementSystem.Web.ViewModels.Reservation;
+using HotelManagementSystem.Web.ViewModels.Room;
 
 namespace HotelManagementSystem.Services.Data.Interfaces
 {
@@ -7,6 +8,8 @@ namespace HotelManagementSystem.Services.Data.Interfaces
         Task<IEnumerable<ReservationIndexViewModel>> GetAllOrderedByCheckInAsync();
         Task<IEnumerable<ReservationIndexViewModel>> GetAllByUserIdOrderedByCheckInAsync(string userId);
         Task<bool> CreateReservationAsync(AddReservationFormModel model, string userId);
+        Task<EditReservationFormModel?> GetReservationForEditByIdAsync(Guid id);
+        Task<bool> EditReservationAsync(EditReservationFormModel model);
         Task<decimal> CalculateTotalPrice(string roomId, DateTime checkInDate, DateTime checkOutDate);
         Task<List<DateTime>> GetUnavailableDatesAsync(Guid roomId);
 

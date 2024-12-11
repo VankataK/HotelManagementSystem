@@ -6,6 +6,7 @@ namespace HotelManagementSystem.Data.Repository.Interfaces
     {
         Task<bool> IsAvailableAsync(Guid roomId, DateTime checkInDate, DateTime checkOutDate);
         Task BlockRoomDatesAsync(Guid roomId, DateTime checkInDate, DateTime checkOutDate);
+        Task FreeRoomDatesAsync(Guid roomId, DateTime checkInDate, DateTime checkOutDate);
         Task<List<DateTime>> GetUnavailableDatesAsync(Guid roomId);
     }
 }

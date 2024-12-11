@@ -106,6 +106,59 @@ namespace HotelManagementSystem.Web.Controllers
         }
 
         [HttpGet]
+        [Authorize]
+        public async Task<IActionResult> Edit(string? id)
+        {
+            bool isReceptionist = await this.IsUserReceptionistAsync();
+            if (!isReceptionist)
+            {
+                return this.RedirectToAction("Index","Home");
+            }
+
+            Guid reservationGuid = Guid.Empty;
+            bool isIdValid = this.IsGuidValid(id, ref reservationGuid);
+            if (!isIdValid)
+            {
+                return this.RedirectToAction(nameof(Manage));
+            }
+
+            EditReservationFormModel? formModel = await this.reservationService
+                .GetReservationForEditByIdAsync(reservationGuid);
+            if (formModel == null)
+            {
+                return this.RedirectToAction(nameof(Manage));
+            }
+
+            return this.View(formModel);
+        }
+
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> Edit(EditReservationFormModel formModel)
+        {
+            bool isReceptionist = await this.IsUserReceptionistAsync();
+            if (!isReceptionist)
+            {
+                return this.RedirectToAction("Index", "Home");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return this.View(formModel);
+            }
+
+            bool isUpdated = await this.reservationService
+                .EditReservationAsync(formModel);
+            if (!isUpdated)
+            {
+                ModelState.AddModelError(string.Empty, "Unexpected error occurred while updating the reservation! Please contact administrator");
+                return this.View(formModel);
+            }
+
+            return this.RedirectToAction("Manage", new { id = formModel.Id });
+        }
+
+        [HttpGet]
         public async Task<IActionResult> CalculatePrice(string roomId, DateTime checkInDate, DateTime checkOutDate)
         {
             if (checkInDate >= checkOutDate)

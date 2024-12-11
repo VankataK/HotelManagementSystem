@@ -15,7 +15,7 @@ namespace HotelManagementSystem.Data.Models
         public Guid RoomId { get; set; }
 
         [ForeignKey(nameof(RoomId))]
-        [DeleteBehavior(DeleteBehavior.Restrict)]
+        [DeleteBehavior(DeleteBehavior.Cascade)]
         public Room Room { get; set; } = null!;
 
         [Required]

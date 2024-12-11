@@ -27,6 +27,18 @@ namespace HotelManagementSystem.Data.Repository
             await this.AddRangeAsync(datesToBlock.ToArray());
         }
 
+        public async Task FreeRoomDatesAsync(Guid roomId, DateTime checkInDate, DateTime checkOutDate)
+        {
+            var datesToRemove = await this.GetAllAttached()
+                .Where(ra => ra.RoomId == roomId && (ra.Date >= checkInDate || ra.Date < checkOutDate))
+                .ToListAsync();
+
+            foreach (var date in datesToRemove)
+            {
+                await this.DeleteAsync(date);
+            }
+        }
+
         public async Task<List<DateTime>> GetUnavailableDatesAsync(Guid roomId)
         {
             return await this.GetAllAttached()

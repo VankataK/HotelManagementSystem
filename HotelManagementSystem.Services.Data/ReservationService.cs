@@ -5,6 +5,7 @@ using HotelManagementSystem.Web.ViewModels.Reservation;
 using static HotelManagementSystem.Common.EntityValidationConstants.Reservation;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
+using HotelManagementSystem.Web.ViewModels.Room;
 
 namespace HotelManagementSystem.Services.Data
 {
@@ -101,6 +102,76 @@ namespace HotelManagementSystem.Services.Data
             await this.reservationRepository.AddAsync(reservation);
 
             return true;
+        }
+
+        public async Task<EditReservationFormModel?> GetReservationForEditByIdAsync(Guid id)
+        {
+            Reservation? reservation = await this.reservationRepository
+                .GetAllAttached()
+                .Where(r => r.IsDeleted == false)
+                .FirstOrDefaultAsync(c => c.Id == id);
+
+            EditReservationFormModel? reservationModel = new EditReservationFormModel()
+                {
+                    Id = reservation.Id.ToString(),
+                    RoomId = reservation.RoomId.ToString(),
+                    CheckInDate = reservation.CheckInDate.ToString(ReservationDateFormat),
+                    CheckOutDate = reservation.CheckOutDate.ToString(ReservationDateFormat),
+                    TotalPrice = reservation.TotalPrice
+                };
+
+            await roomAvailabilityRepository.FreeRoomDatesAsync(reservation.RoomId, reservation.CheckInDate, reservation.CheckOutDate);
+            return reservationModel;
+        }
+
+        public async Task<bool> EditReservationAsync(EditReservationFormModel model)
+        {
+            Guid modelGuid = Guid.Empty;
+            bool isIdValid = this.IsGuidValid(model.Id, ref modelGuid);
+            if (!isIdValid)
+            {
+                return false;
+            }
+
+            Reservation reservationEntity = await this.reservationRepository.GetByIdAsync(modelGuid);
+
+            if (reservationEntity == null)
+            {
+                return false;
+            }
+
+            bool isCheckInDateValid = DateTime
+                .TryParseExact(model.CheckInDate, ReservationDateFormat, CultureInfo.InvariantCulture, DateTimeStyles.None,
+                    out DateTime newCheckInDate);
+            bool isCheckOutDateValid = DateTime
+                .TryParseExact(model.CheckOutDate, ReservationDateFormat, CultureInfo.InvariantCulture, DateTimeStyles.None,
+                    out DateTime newCheckOutDate);
+            if (!isCheckInDateValid || !isCheckOutDateValid)
+            {
+                return false;
+            }
+
+            Guid roomGuid = Guid.Empty;
+            isIdValid = this.IsGuidValid(model.RoomId, ref roomGuid);
+            if (!isIdValid)
+            {
+                return false;
+            }
+
+            bool areDatesAvailable = await this.roomAvailabilityRepository.IsAvailableAsync(roomGuid, newCheckInDate, newCheckOutDate);
+
+            if (!areDatesAvailable)
+            {
+                return false;
+            }
+
+            await roomAvailabilityRepository.BlockRoomDatesAsync(roomGuid, newCheckInDate, newCheckOutDate);
+
+            reservationEntity.CheckInDate = newCheckInDate;
+            reservationEntity.CheckOutDate = newCheckOutDate;
+            reservationEntity.TotalPrice = await CalculateTotalPrice(model.RoomId, reservationEntity.CheckInDate, reservationEntity.CheckOutDate);
+
+            return await this.reservationRepository.UpdateAsync(reservationEntity);
         }
 
         public async Task<decimal> CalculateTotalPrice(string roomId, DateTime checkInDate, DateTime checkOutDate)

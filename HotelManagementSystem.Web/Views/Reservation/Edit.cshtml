@@ -1,0 +1,32 @@
+﻿@using HotelManagementSystem.Web.ViewModels.Reservation
+@model EditReservationFormModel
+
+<h2 class="my-4 text-center">Edit Reservation</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <input asp-for="RoomId" type="hidden" id="roomId" />
+
+    <div class="mb-3">
+        <label asp-for="CheckInDate" class="form-label">Check-In Date</label>
+        <input asp-for="CheckInDate" type="date" class="form-control" id="checkInDate"/>
+        <span asp-validation-for="CheckInDate" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="CheckOutDate" class="form-label">Check-Out Date</label>
+        <input asp-for="CheckOutDate" type="date" class="form-control" id="checkOutDate"/>
+        <span asp-validation-for="CheckOutDate" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="TotalPrice" class="form-label">Total Price</label>
+        <input asp-for="TotalPrice" type="text" class="form-control" id="totalPrice" readonly />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+    <a asp-action="Manage" class="btn btn-secondary">Cancel</a>
+</form>
+
+<script src="~/js/manageReservations.js"></script>
