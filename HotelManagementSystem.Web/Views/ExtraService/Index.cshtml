@@ -1,0 +1,30 @@
+﻿@using HotelManagementSystem.Web.ViewModels.ExtraService
+@model IEnumerable<ExtraServiceIndexViewModel>
+
+@{
+    ViewData["Title"] = "All Extra Services";
+}
+
+<h2 class="my-4 text-center">Extra Services</h2>
+
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">Service name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var extraService in Model)
+        {
+            <tr>
+                <td>@extraService.ServiceName</td>
+                <td>@extraService.Price</td>
+                <td>
+                    <a asp-action="AddToReservation" asp-route-id="@extraService.Id" class="btn btn-danger btn-sm">Add to reservation</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

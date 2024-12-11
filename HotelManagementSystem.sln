@@ -3,25 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelManagementSystem.Web", "HotelManagementSystem.Web\HotelManagementSystem.Web.csproj", "{FDA85688-1710-4DC7-9C69-50CE6D5668AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelManagementSystem.Web", "HotelManagementSystem.Web\HotelManagementSystem.Web.csproj", "{FDA85688-1710-4DC7-9C69-50CE6D5668AF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{1E507472-565B-4425-BA10-81EAAA0909E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelManagementSystem.Web.Infrastructure", "HotelManagementSystem.Web.Infrastructure\HotelManagementSystem.Web.Infrastructure.csproj", "{F2CBB22A-B64F-4389-A9B7-22A3B0FBC93A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelManagementSystem.Web.Infrastructure", "HotelManagementSystem.Web.Infrastructure\HotelManagementSystem.Web.Infrastructure.csproj", "{F2CBB22A-B64F-4389-A9B7-22A3B0FBC93A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelManagementSystem.Web.ViewModels", "HotelManagementSystem.Web.ViewModels\HotelManagementSystem.Web.ViewModels.csproj", "{A49AD747-BEEC-4625-9E53-2C1A9841A82F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelManagementSystem.Web.ViewModels", "HotelManagementSystem.Web.ViewModels\HotelManagementSystem.Web.ViewModels.csproj", "{A49AD747-BEEC-4625-9E53-2C1A9841A82F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelManagementSystem.Common", "HotelManagementSystem.Common\HotelManagementSystem.Common.csproj", "{3392744E-2E40-4871-B0F0-66B522964020}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelManagementSystem.Common", "HotelManagementSystem.Common\HotelManagementSystem.Common.csproj", "{3392744E-2E40-4871-B0F0-66B522964020}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{C402429B-F184-43D5-A3F5-391F26032145}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelManagementSystem.Data", "HotelManagementSystem.Data\HotelManagementSystem.Data.csproj", "{B8DBEFE0-92EF-44E1-93FB-E6C71254753C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelManagementSystem.Data", "HotelManagementSystem.Data\HotelManagementSystem.Data.csproj", "{B8DBEFE0-92EF-44E1-93FB-E6C71254753C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelManagementSystem.Data.Models", "HotelManagementSystem.Data.Models\HotelManagementSystem.Data.Models.csproj", "{A874C84E-BA52-47F2-BA00-471196C5C659}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelManagementSystem.Data.Models", "HotelManagementSystem.Data.Models\HotelManagementSystem.Data.Models.csproj", "{A874C84E-BA52-47F2-BA00-471196C5C659}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{88BD8A94-C69A-46E8-9A2A-86584FA5DA04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelManagementSystem.Services.Data", "HotelManagementSystem.Services.Data\HotelManagementSystem.Services.Data.csproj", "{B3B0E852-2092-4E2E-A2A4-F5D268287B52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelManagementSystem.Services.Data", "HotelManagementSystem.Services.Data\HotelManagementSystem.Services.Data.csproj", "{B3B0E852-2092-4E2E-A2A4-F5D268287B52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelManagementSystem.Services.Tests", "HotelManagementSystem.Services.Tests\HotelManagementSystem.Services.Tests.csproj", "{3306D516-1212-4914-A879-203CE25A7139}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{B3B0E852-2092-4E2E-A2A4-F5D268287B52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3B0E852-2092-4E2E-A2A4-F5D268287B52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3B0E852-2092-4E2E-A2A4-F5D268287B52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3306D516-1212-4914-A879-203CE25A7139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3306D516-1212-4914-A879-203CE25A7139}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3306D516-1212-4914-A879-203CE25A7139}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3306D516-1212-4914-A879-203CE25A7139}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +74,7 @@ Global
 		{B8DBEFE0-92EF-44E1-93FB-E6C71254753C} = {C402429B-F184-43D5-A3F5-391F26032145}
 		{A874C84E-BA52-47F2-BA00-471196C5C659} = {C402429B-F184-43D5-A3F5-391F26032145}
 		{B3B0E852-2092-4E2E-A2A4-F5D268287B52} = {88BD8A94-C69A-46E8-9A2A-86584FA5DA04}
+		{3306D516-1212-4914-A879-203CE25A7139} = {88BD8A94-C69A-46E8-9A2A-86584FA5DA04}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B0859D60-F396-416F-84B4-839D2D920382}
