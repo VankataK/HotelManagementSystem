@@ -42,6 +42,7 @@ namespace HotelManagementSystem.Web
 
             builder.Services.RegisterRepositories(typeof(ApplicationUser).Assembly);
             builder.Services.AddScoped<IRoomAvailabilityRepository, RoomAvailabilityRepository>();
+            builder.Services.AddScoped<IRepository<Category, Guid>, BaseRepository<Category, Guid>>();
             builder.Services.RegisterUserDefinedServices(typeof(IBaseService).Assembly);
 
             builder.Services.AddControllersWithViews(cfg =>

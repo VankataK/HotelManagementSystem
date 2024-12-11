@@ -1,0 +1,58 @@
+﻿@using HotelManagementSystem.Web.ViewModels.Admin.RoomManagment
+@model AddRoomInputModel
+@{
+    ViewData["Title"] = "Add Room";
+}
+
+<h2>Add a New Room</h2>
+
+<form asp-action="Create" method="post" enctype="multipart/form-data" class="mt-4">
+    <div class="mb-3">
+        <label asp-for="RoomNumber" class="form-label">Room Number</label>
+        <input asp-for="RoomNumber" class="form-control" />
+        <span asp-validation-for="RoomNumber" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="CategoryId" class="form-label">Category</label>
+        <select asp-for="CategoryId" class="form-select">
+            <option value="" disabled selected>-- Select a Category --</option>
+            @foreach (var category in Model.Categories)
+            {
+                <option value="@category.Id">@category.Name</option>
+            }
+        </select>
+        <span asp-validation-for="CategoryId" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label">Description</label>
+        <textarea asp-for="Description" class="form-control" rows="4"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ImageUrl" class="form-label">Image URL</label>
+        <input asp-for="ImageUrl" class="form-control" />
+        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="PricePerNight" class="form-label">Price Per Night</label>
+        <input asp-for="PricePerNight" type="number" class="form-control" step="0.01" />
+        <span asp-validation-for="PricePerNight" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="MaxCapacity" class="form-label">Max Capacity</label>
+        <input asp-for="MaxCapacity" type="number" class="form-control" />
+        <span asp-validation-for="MaxCapacity" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Room</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
