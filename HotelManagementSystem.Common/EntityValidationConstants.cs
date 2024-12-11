@@ -12,8 +12,8 @@
             public const int ImageUrlMaxLength = 2083;
             public const string PricePerNightMinValue = "0";
             public const string PricePerNightMaxValue = "10000";
-            public const int MaxOccupancyMinValue = 1;
-            public const int MaxOccupancyMaxValue = 10;
+            public const int MaxCapacityMinValue = 1;
+            public const int MaxCapacityMaxValue = 10;
         }
 
         public static class Category 

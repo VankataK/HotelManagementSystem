@@ -224,7 +224,7 @@ namespace HotelManagementSystem.Web.Controllers
                 return BadRequest("Invalid Room ID.");
             }
 
-            decimal totalPrice = await reservationService.CalculateTotalPrice(roomGuid.ToString(), checkInDate, checkOutDate);
+            decimal totalPrice = await reservationService.CalculateTotalPriceAsync(roomGuid.ToString(), checkInDate, checkOutDate);
 
             return Json(new { totalPrice });
         }

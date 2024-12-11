@@ -1,7 +1,9 @@
 ﻿using HotelManagementSystem.Data.Models;
+using HotelManagementSystem.Data.Repository;
 using HotelManagementSystem.Data.Repository.Interfaces;
 using HotelManagementSystem.Services.Data.Interfaces;
 using HotelManagementSystem.Web.ViewModels.Admin.RoomManagment;
+using HotelManagementSystem.Web.ViewModels.Reservation;
 using HotelManagementSystem.Web.ViewModels.Room;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
@@ -68,7 +70,6 @@ namespace HotelManagementSystem.Services.Data
             await this.roomRepository.AddAsync(room);
         }
 
-
         public async Task<RoomDetailsViewModel?> GetRoomDetailsByIdAsync(Guid id)
         {
             Room? room = await this.roomRepository
@@ -93,6 +94,53 @@ namespace HotelManagementSystem.Services.Data
             }
 
             return viewModel;
+        }
+
+        public async Task<EditRoomFormModel?> GetRoomForEditByIdAsync(Guid id)
+        {
+            EditRoomFormModel? roomModel = await this.roomRepository
+                .GetAllAttached()
+                .Where(r => r.IsDeleted == false)
+                .Select(r => new EditRoomFormModel()
+                {
+                    Id = r.Id.ToString(),
+                    RoomNumber = r.RoomNumber,
+                    CategoryId = r.CategoryId,
+                    Description = r.Description,
+                    ImageUrl = r.ImageUrl,
+                    PricePerNight = r.PricePerNight,
+                    MaxCapacity = r.MaxCapacity
+                    
+                })
+                .FirstOrDefaultAsync(r => r.Id.ToLower() == id.ToString().ToLower());
+
+            return roomModel;
+        }
+
+        public async Task<bool> EditRoomAsync(EditRoomFormModel model)
+        {
+            Guid modelGuid = Guid.Empty;
+            bool isIdValid = this.IsGuidValid(model.Id, ref modelGuid);
+            if (!isIdValid)
+            {
+                return false;
+            }
+
+            Room roomEntity = await this.roomRepository.GetByIdAsync(modelGuid);
+
+            if (roomEntity == null)
+            {
+                return false;
+            }
+
+            roomEntity.RoomNumber = model.RoomNumber;
+            roomEntity.CategoryId = model.CategoryId;
+            roomEntity.Description = model.Description;
+            roomEntity.ImageUrl = model.ImageUrl;
+            roomEntity.PricePerNight = model.PricePerNight;
+            roomEntity.MaxCapacity = model.MaxCapacity;
+
+            return await this.roomRepository.UpdateAsync(roomEntity);
         }
 
         public async Task<AddRoomToReservationViewModel?> GetRoomForReservationByIdAsync(Guid id)

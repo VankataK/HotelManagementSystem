@@ -6,7 +6,7 @@ namespace HotelManagementSystem.Web.ViewModels.Reservation
 {
     public class EditReservationFormModel
     {
-        [Key]
+        [Required]
         public string Id { get; set; } = null!;
 
         [Required]

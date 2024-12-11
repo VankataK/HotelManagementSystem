@@ -5,7 +5,6 @@ using HotelManagementSystem.Web.ViewModels.Reservation;
 using static HotelManagementSystem.Common.EntityValidationConstants.Reservation;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
-using HotelManagementSystem.Web.ViewModels.Room;
 
 namespace HotelManagementSystem.Services.Data
 {
@@ -96,7 +95,7 @@ namespace HotelManagementSystem.Services.Data
                 GuestId = Guid.Parse(userId),
                 CheckInDate = checkInDate,
                 CheckOutDate = checkOutDate,
-                TotalPrice = await this.CalculateTotalPrice(model.Room.Id, checkInDate, checkOutDate)
+                TotalPrice = await this.CalculateTotalPriceAsync(model.Room.Id, checkInDate, checkOutDate)
             };
 
             await this.reservationRepository.AddAsync(reservation);
@@ -169,7 +168,7 @@ namespace HotelManagementSystem.Services.Data
 
             reservationEntity.CheckInDate = newCheckInDate;
             reservationEntity.CheckOutDate = newCheckOutDate;
-            reservationEntity.TotalPrice = await CalculateTotalPrice(model.RoomId, reservationEntity.CheckInDate, reservationEntity.CheckOutDate);
+            reservationEntity.TotalPrice = await CalculateTotalPriceAsync(model.RoomId, reservationEntity.CheckInDate, reservationEntity.CheckOutDate);
 
             return await this.reservationRepository.UpdateAsync(reservationEntity);
         }
@@ -205,13 +204,36 @@ namespace HotelManagementSystem.Services.Data
             return await this.reservationRepository.UpdateAsync(reservationToDelete);
         }
 
-        public async Task<decimal> CalculateTotalPrice(string roomId, DateTime checkInDate, DateTime checkOutDate)
+        public async Task<decimal> CalculateTotalPriceAsync(string roomId, DateTime checkInDate, DateTime checkOutDate)
         {
             var room = await roomRepository.GetByIdAsync(Guid.Parse(roomId));
             if (room == null) throw new ArgumentException("Room not found.");
 
             int nights = (int)(checkOutDate - checkInDate).TotalDays;
             return room.PricePerNight * nights;
+        }
+
+        public async Task<bool> UpdateTotalPricesAsync(string roomId)
+        {
+            Guid roomGuid = Guid.Empty;
+            bool isIdValid = this.IsGuidValid(roomId, ref roomGuid);
+            if (!isIdValid)
+            {
+                return false;
+            }
+
+            List<Reservation> reservationsToUpgrade = await this.reservationRepository
+                .GetAllAttached()
+                .Include(r => r.Room)
+                .Where(r => r.RoomId == roomGuid)
+                .ToListAsync();
+
+            foreach (var r in reservationsToUpgrade)
+            {
+                r.TotalPrice = await this.CalculateTotalPriceAsync(roomId, r.CheckInDate, r.CheckOutDate);
+            }
+
+            return true;
         }
 
         public async Task<List<DateTime>> GetUnavailableDatesAsync(Guid roomId)

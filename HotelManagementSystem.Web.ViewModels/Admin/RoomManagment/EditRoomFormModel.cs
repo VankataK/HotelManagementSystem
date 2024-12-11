@@ -1,11 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using HotelManagementSystem.Web.ViewModels.Category;
 using static HotelManagementSystem.Common.EntityValidationConstants.Room;
 using static HotelManagementSystem.Common.EntityValidationMessages.Room;
-using HotelManagementSystem.Web.ViewModels.Category;
+
 namespace HotelManagementSystem.Web.ViewModels.Admin.RoomManagment
 {
-    public class AddRoomInputModel
+    public class EditRoomFormModel
     {
+        [Required]
+        public string Id { get; set; } = null!;
 
         [Required(ErrorMessage = RoomNumberRequiredMessage)]
         [StringLength(RoomNumberMaxLength, MinimumLength = RoomNumberMinLength)]
