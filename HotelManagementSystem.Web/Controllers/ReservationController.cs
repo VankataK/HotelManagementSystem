@@ -3,6 +3,7 @@ using HotelManagementSystem.Web.Infrastructure.Extensions;
 using HotelManagementSystem.Web.ViewModels.Reservation;
 using HotelManagementSystem.Web.ViewModels.Room;
 using static HotelManagementSystem.Common.EntityValidationConstants.Reservation;
+using static HotelManagementSystem.Common.ApplicationConstants;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -90,14 +91,9 @@ namespace HotelManagementSystem.Web.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = $"{AdminRoleName},{ReceptionistRoleName}")]
         public async Task<IActionResult> Manage()
         {
-            bool isReceptionist = await this.IsUserReceptionistAsync();
-            if (!isReceptionist)
-            {
-                return this.RedirectToAction(nameof(Index));
-            }
-
             IEnumerable<ReservationIndexViewModel> reservations =
                 await this.reservationService.GetAllOrderedByCheckInAsync();
 
@@ -105,14 +101,9 @@ namespace HotelManagementSystem.Web.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = $"{AdminRoleName},{ReceptionistRoleName}")]
         public async Task<IActionResult> Edit(string? id)
         {
-            bool isReceptionist = await this.IsUserReceptionistAsync();
-            if (!isReceptionist)
-            {
-                return this.RedirectToAction("Index","Home");
-            }
-
             Guid reservationGuid = Guid.Empty;
             bool isIdValid = this.IsGuidValid(id, ref reservationGuid);
             if (!isIdValid)
@@ -131,14 +122,9 @@ namespace HotelManagementSystem.Web.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = $"{AdminRoleName},{ReceptionistRoleName}")]
         public async Task<IActionResult> Edit(EditReservationFormModel formModel)
         {
-            bool isReceptionist = await this.IsUserReceptionistAsync();
-            if (!isReceptionist)
-            {
-                return this.RedirectToAction("Index", "Home");
-            }
-
             if (!ModelState.IsValid)
             {
                 return this.View(formModel);
@@ -156,14 +142,9 @@ namespace HotelManagementSystem.Web.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = $"{AdminRoleName},{ReceptionistRoleName}")]
         public async Task<IActionResult> Delete(string? id)
         {
-            bool isReceptionist = await this.IsUserReceptionistAsync();
-            if (!isReceptionist)
-            {
-                return this.RedirectToAction("Index", "Home");
-            }
-
             Guid reservationGuid = Guid.Empty;
             bool isIdValid = this.IsGuidValid(id, ref reservationGuid);
             if (!isIdValid)
@@ -182,14 +163,9 @@ namespace HotelManagementSystem.Web.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = $"{AdminRoleName},{ReceptionistRoleName}")]
         public async Task<IActionResult> SoftDeleteConfirmed(DeleteReservationViewModel reservation)
         {
-            bool isReceptionist = await this.IsUserReceptionistAsync();
-            if (!isReceptionist)
-            {
-                return this.RedirectToAction("Index", "Home");
-            }
-
             Guid reservationGuid = Guid.Empty;
             bool isIdValid = this.IsGuidValid(reservation.Id, ref reservationGuid);
             if (!isIdValid)

@@ -36,12 +36,15 @@ namespace HotelManagementSystem.Services.Data
             return rooms;
         }
 
-        public async Task<IEnumerable<RoomIndexViewModel>> IndexGetAllOrderedByRoomNumberAsync()
+        public async Task<(IEnumerable<RoomIndexViewModel> Rooms, int TotalPages)> IndexGetAllAsync(
+            string? searchQuery = null, 
+            string? category = null,
+            int pageNumber = 1, int pageSize = 5)
         {
             IEnumerable<RoomIndexViewModel> rooms = await this.roomRepository
                 .GetAllAttached()
+                .Include(r => r.Category)
                 .Where(r => r.IsDeleted == false)
-                .OrderBy(r => r.RoomNumber)
                 .Select(r => new RoomIndexViewModel()
                 {
                     Id = r.Id.ToString(),
@@ -52,7 +55,28 @@ namespace HotelManagementSystem.Services.Data
                 })
                 .ToListAsync();
 
-            return rooms;
+            if (!string.IsNullOrWhiteSpace(searchQuery))
+            {
+                searchQuery = searchQuery.ToLower().Trim();
+                rooms = rooms
+                    .Where(r => r.RoomNumber.ToLower().Contains(searchQuery));
+            }
+
+            if (!string.IsNullOrWhiteSpace(category))
+            {
+                category = category.ToLower().Trim();
+                rooms = rooms
+                    .Where(r => r.CategoryName.ToLower().Contains(category));
+            }
+
+            int totalRooms = rooms.Count();
+            int totalPages = (int)Math.Ceiling(totalRooms / (double)pageSize);
+
+            rooms = rooms
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize);
+
+            return (rooms, totalPages);
         }
 
         public async Task AddRoomAsync(AddRoomInputModel inputModel)

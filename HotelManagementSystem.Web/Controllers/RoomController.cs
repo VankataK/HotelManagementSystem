@@ -15,10 +15,18 @@ namespace HotelManagementSystem.Web.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(
+            string? searchQuery = null, 
+            string? category = null,
+            int pageNumber = 1, int pageSize = 5)
         {
-            IEnumerable<RoomIndexViewModel> rooms = 
-                await this.roomService.IndexGetAllOrderedByRoomNumberAsync();
+            (IEnumerable<RoomIndexViewModel> rooms, int totalPages) = 
+                await this.roomService.IndexGetAllAsync(searchQuery, category, pageNumber, pageSize);
+
+            ViewData["SearchQuery"] = searchQuery;
+            ViewData["Category"] = category;
+            ViewData["CurrentPage"] = pageNumber;
+            ViewData["TotalPages"] = totalPages;
 
             return View(rooms);
         }
