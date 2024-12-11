@@ -10,6 +10,8 @@ namespace HotelManagementSystem.Services.Data.Interfaces
         Task<bool> CreateReservationAsync(AddReservationFormModel model, string userId);
         Task<EditReservationFormModel?> GetReservationForEditByIdAsync(Guid id);
         Task<bool> EditReservationAsync(EditReservationFormModel model);
+        Task<DeleteReservationViewModel?> GetReservationForDeleteByIdAsync(Guid id);
+        Task<bool> SoftDeleteReservationAsync(Guid id);
         Task<decimal> CalculateTotalPrice(string roomId, DateTime checkInDate, DateTime checkOutDate);
         Task<List<DateTime>> GetUnavailableDatesAsync(Guid roomId);
 

@@ -1,0 +1,20 @@
+﻿﻿@using HotelManagementSystem.Web.ViewModels.Reservation
+@model DeleteReservationViewModel
+
+<h2>Delete Reservation</h2>
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<p>Are you sure you want to delete the reservation: <strong>@Model.RoomNumber - from @Model.CheckInDate to @Model.CheckOutDate</strong>?</p>
+
+<form asp-action="SoftDeleteConfirmed" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+    <a asp-action="Manage" class="btn btn-secondary">Cancel</a>
+</form>

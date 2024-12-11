@@ -109,7 +109,7 @@ namespace HotelManagementSystem.Services.Data
             Reservation? reservation = await this.reservationRepository
                 .GetAllAttached()
                 .Where(r => r.IsDeleted == false)
-                .FirstOrDefaultAsync(c => c.Id == id);
+                .FirstOrDefaultAsync(r => r.Id == id);
 
             EditReservationFormModel? reservationModel = new EditReservationFormModel()
                 {
@@ -172,6 +172,37 @@ namespace HotelManagementSystem.Services.Data
             reservationEntity.TotalPrice = await CalculateTotalPrice(model.RoomId, reservationEntity.CheckInDate, reservationEntity.CheckOutDate);
 
             return await this.reservationRepository.UpdateAsync(reservationEntity);
+        }
+
+        public async Task<DeleteReservationViewModel?> GetReservationForDeleteByIdAsync(Guid id)
+        {
+            DeleteReservationViewModel? reservationToDelete = await this.reservationRepository
+                .GetAllAttached()
+                .Include(r => r.Room)
+                .Where(r => r.IsDeleted == false)
+                .Select(r => new DeleteReservationViewModel
+                {
+                    Id = r.Id.ToString(),
+                    RoomNumber = r.Room.RoomNumber,
+                    CheckInDate = r.CheckInDate.ToString(ReservationDateFormat),
+                    CheckOutDate = r.CheckOutDate.ToString(ReservationDateFormat)
+                })
+                .FirstOrDefaultAsync(r => r.Id.ToLower() == id.ToString().ToLower());
+
+            return reservationToDelete;
+        }
+
+        public async Task<bool> SoftDeleteReservationAsync(Guid id)
+        {
+            Reservation? reservationToDelete = await this.reservationRepository
+                .FirstOrDefaultAsync(c => c.Id.ToString().ToLower() == id.ToString().ToLower());
+            if (reservationToDelete == null)
+            {
+                return false;
+            }
+
+            reservationToDelete.IsDeleted = true;
+            return await this.reservationRepository.UpdateAsync(reservationToDelete);
         }
 
         public async Task<decimal> CalculateTotalPrice(string roomId, DateTime checkInDate, DateTime checkOutDate)

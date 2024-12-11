@@ -90,7 +90,6 @@ namespace HotelManagementSystem.Web.Controllers
         }
 
         [HttpGet]
-        [Authorize]
         public async Task<IActionResult> Manage()
         {
             bool isReceptionist = await this.IsUserReceptionistAsync();
@@ -106,7 +105,6 @@ namespace HotelManagementSystem.Web.Controllers
         }
 
         [HttpGet]
-        [Authorize]
         public async Task<IActionResult> Edit(string? id)
         {
             bool isReceptionist = await this.IsUserReceptionistAsync();
@@ -133,7 +131,6 @@ namespace HotelManagementSystem.Web.Controllers
         }
 
         [HttpPost]
-        [Authorize]
         public async Task<IActionResult> Edit(EditReservationFormModel formModel)
         {
             bool isReceptionist = await this.IsUserReceptionistAsync();
@@ -156,6 +153,60 @@ namespace HotelManagementSystem.Web.Controllers
             }
 
             return this.RedirectToAction("Manage", new { id = formModel.Id });
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(string? id)
+        {
+            bool isReceptionist = await this.IsUserReceptionistAsync();
+            if (!isReceptionist)
+            {
+                return this.RedirectToAction("Index", "Home");
+            }
+
+            Guid reservationGuid = Guid.Empty;
+            bool isIdValid = this.IsGuidValid(id, ref reservationGuid);
+            if (!isIdValid)
+            {
+                return this.RedirectToAction(nameof(Manage));
+            }
+
+            DeleteReservationViewModel? reservationToDeleteViewModel =
+                await this.reservationService.GetReservationForDeleteByIdAsync(reservationGuid);
+            if (reservationToDeleteViewModel == null)
+            {
+                return this.RedirectToAction(nameof(Manage));
+            }
+
+            return this.View(reservationToDeleteViewModel);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> SoftDeleteConfirmed(DeleteReservationViewModel reservation)
+        {
+            bool isReceptionist = await this.IsUserReceptionistAsync();
+            if (!isReceptionist)
+            {
+                return this.RedirectToAction("Index", "Home");
+            }
+
+            Guid reservationGuid = Guid.Empty;
+            bool isIdValid = this.IsGuidValid(reservation.Id, ref reservationGuid);
+            if (!isIdValid)
+            {
+                return this.RedirectToAction(nameof(Manage));
+            }
+
+            bool isDeleted = await this.reservationService
+                .SoftDeleteReservationAsync(reservationGuid);
+            if (!isDeleted)
+            {
+                TempData["ErrorMessage"] =
+                    "Unexpected error occurred while trying to delete the reservation! Please contact system administrator!";
+                return this.RedirectToAction(nameof(Delete), new { id = reservation.Id });
+            }
+
+            return this.RedirectToAction(nameof(Manage));
         }
 
         [HttpGet]
